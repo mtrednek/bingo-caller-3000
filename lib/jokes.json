@@ -1,0 +1,4502 @@
+[
+  {
+    "id": 1,
+    "question": "What do you call a lazy kangaroo?",
+    "answer": "Pouch potato."
+  },
+  {
+    "id": 2,
+    "question": "Why don't scientists trust atoms?",
+    "answer": "Because they make up everything!"
+  },
+  {
+    "id": 3,
+    "question": "What do you call a fake noodle?",
+    "answer": "An impasta."
+  },
+  {
+    "id": 4,
+    "question": "Why did the scarecrow win an award?",
+    "answer": "Because he was outstanding in his field."
+  },
+  {
+    "id": 5,
+    "question": "What do you call a sad strawberry?",
+    "answer": "A blueberry."
+  },
+  {
+    "id": 6,
+    "question": "Why can't a bicycle stand up by itself?",
+    "answer": "Because it's two tired."
+  },
+  {
+    "id": 7,
+    "question": "What did the zero say to the eight?",
+    "answer": "Nice belt!"
+  },
+  {
+    "id": 8,
+    "question": "What do you get when you cross a snowman and a vampire?",
+    "answer": "Frostbite."
+  },
+  {
+    "id": 9,
+    "question": "How do you make a tissue dance?",
+    "answer": "You put a little boogie in it!"
+  },
+  {
+    "id": 10,
+    "question": "What do you call a bear with no teeth?",
+    "answer": "A gummy bear."
+  },
+  {
+    "id": 11,
+    "question": "Why did the cookie go to the doctor?",
+    "answer": "Because it felt crummy."
+  },
+  {
+    "id": 12,
+    "question": "What do you call a sleeping bull?",
+    "answer": "A bulldozer."
+  },
+  {
+    "id": 13,
+    "question": "How does a penguin build its house?",
+    "answer": "Igloos it together."
+  },
+  {
+    "id": 14,
+    "question": "What has ears but cannot hear?",
+    "answer": "A cornfield."
+  },
+  {
+    "id": 15,
+    "question": "Why did the tomato turn red?",
+    "answer": "Because it saw the salad dressing!"
+  },
+  {
+    "id": 16,
+    "question": "What is an astronaut's favorite part of a computer?",
+    "answer": "The space bar."
+  },
+  {
+    "id": 17,
+    "question": "Why are ghosts bad at lying?",
+    "answer": "Because you can see right through them."
+  },
+  {
+    "id": 18,
+    "question": "What kind of tree fits in your hand?",
+    "answer": "A palm tree."
+  },
+  {
+    "id": 19,
+    "question": "What do you call a fish with no eyes?",
+    "answer": "Fsh."
+  },
+  {
+    "id": 20,
+    "question": "I'm reading a book on anti-gravity.",
+    "answer": "It's impossible to put down!"
+  },
+  {
+    "id": 21,
+    "question": "What is a witch's favorite subject in school?",
+    "answer": "Spelling."
+  },
+  {
+    "id": 22,
+    "question": "How do you organize a space party?",
+    "answer": "You planet."
+  },
+  {
+    "id": 23,
+    "question": "Why was the math book sad?",
+    "answer": "Because it had too many problems."
+  },
+  {
+    "id": 24,
+    "question": "What do you call cheese that isn't yours?",
+    "answer": "Nacho cheese."
+  },
+  {
+    "id": 25,
+    "question": "What do you call an alligator in a vest?",
+    "answer": "An investigator."
+  },
+  {
+    "id": 26,
+    "question": "What building has the most stories?",
+    "answer": "The library."
+  },
+  {
+    "id": 27,
+    "question": "Why did the student eat his homework?",
+    "answer": "Because the teacher said it was a piece of cake."
+  },
+  {
+    "id": 28,
+    "question": "What did one wall say to the other wall?",
+    "answer": "I'll meet you at the corner."
+  },
+  {
+    "id": 29,
+    "question": "What has one eye but can’t see?",
+    "answer": "A needle."
+  },
+  {
+    "id": 30,
+    "question": "What do you call a dog that does magic tricks?",
+    "answer": "A labracadabrador."
+  },
+  {
+    "id": 31,
+    "question": "Why did the golfer bring two pairs of pants?",
+    "answer": "In case he got a hole in one."
+  },
+  {
+    "id": 32,
+    "question": "What do you get from a pampered cow?",
+    "answer": "Spoiled milk."
+  },
+  {
+    "id": 33,
+    "question": "What do you call a funny mountain?",
+    "answer": "Hill-arious."
+  },
+  {
+    "id": 34,
+    "question": "Why did the belt get arrested?",
+    "answer": "For holding up a pair of pants!"
+  },
+  {
+    "id": 35,
+    "question": "What's a pirate's favorite letter?",
+    "answer": "You'd think it's R, but their first love is the C."
+  },
+  {
+    "id": 36,
+    "question": "Where do cows go for entertainment?",
+    "answer": "The moo-vies."
+  },
+  {
+    "id": 37,
+    "question": "What did the grape do when it got stepped on?",
+    "answer": "It let out a little wine."
+  },
+  {
+    "id": 38,
+    "question": "Why don't skeletons fight each other?",
+    "answer": "They don't have the guts."
+  },
+  {
+    "id": 39,
+    "question": "What do you call a boomerang that won't come back?",
+    "answer": "A stick."
+  },
+  {
+    "id": 40,
+    "question": "How do you know if a joke is a dad joke?",
+    "answer": "When it becomes apparent."
+  },
+  {
+    "id": 41,
+    "question": "What did the ocean say to the beach?",
+    "answer": "Nothing, it just waved."
+  },
+  {
+    "id": 42,
+    "question": "Why are elephants so wrinkled?",
+    "answer": "Because they are too big to iron."
+  },
+  {
+    "id": 43,
+    "question": "What kind of music do mummies listen to?",
+    "answer": "Wrap music."
+  },
+  {
+    "id": 44,
+    "question": "What has four wheels and flies?",
+    "answer": "A garbage truck."
+  },
+  {
+    "id": 45,
+    "question": "What do you call a fly without wings?",
+    "answer": "A walk."
+  },
+  {
+    "id": 46,
+    "question": "What time is it when an elephant sits on a fence?",
+    "answer": "Time to get a new fence."
+  },
+  {
+    "id": 47,
+    "question": "Why was the equal sign so humble?",
+    "answer": "He knew he wasn’t less than or greater than anyone else."
+  },
+  {
+    "id": 48,
+    "question": "What do you call a pony with a sore throat?",
+    "answer": "A little hoarse."
+  },
+  {
+    "id": 49,
+    "question": "How does the moon cut his hair?",
+    "answer": "Eclipse it."
+  },
+  {
+    "id": 50,
+    "question": "What do you call a pig that knows karate?",
+    "answer": "A pork chop."
+  },
+  {
+    "id": 51,
+    "question": "Why did the man run around his bed?",
+    "answer": "To catch up on his sleep!"
+  },
+  {
+    "id": 52,
+    "question": "What do you call a chicken that is looking at a piece of lettuce?",
+    "answer": "Chicken sees-a-salad."
+  },
+  {
+    "id": 53,
+    "question": "What did the janitor say when he jumped out of the closet?",
+    "answer": "\"Supplies!\""
+  },
+  {
+    "id": 54,
+    "question": "Why can't you give Elsa a balloon?",
+    "answer": "Because she will let it go."
+  },
+  {
+    "id": 55,
+    "question": "What do you call a can opener that doesn't work?",
+    "answer": "A can't opener."
+  },
+  {
+    "id": 56,
+    "question": "Why are teddy bears never hungry?",
+    "answer": "They are always stuffed."
+  },
+  {
+    "id": 57,
+    "question": "What do you call a lazy baby kangaroo?",
+    "answer": "Pouch potato."
+  },
+  {
+    "id": 58,
+    "question": "What's the best thing about Switzerland?",
+    "answer": "I don't know, but the flag is a big plus."
+  },
+  {
+    "id": 59,
+    "question": "Why do we tell actors to \"break a leg?\"",
+    "answer": "Because every play has a cast."
+  },
+  {
+    "id": 60,
+    "question": "Why couldn't the pony sing a lullaby?",
+    "answer": "She was a little hoarse."
+  },
+  {
+    "id": 61,
+    "question": "What do you call a horse that lives next door?",
+    "answer": "A neighbor."
+  },
+  {
+    "id": 62,
+    "question": "What do you call a group of singing whales?",
+    "answer": "An orca-stra."
+  },
+  {
+    "id": 63,
+    "question": "Why did the picture go to jail?",
+    "answer": "Because it was framed."
+  },
+  {
+    "id": 64,
+    "question": "What do you call a line of rabbits walking backwards?",
+    "answer": "A receding hare line."
+  },
+  {
+    "id": 65,
+    "question": "What happens when you tell an egg a joke?",
+    "answer": "It cracks up."
+  },
+  {
+    "id": 66,
+    "question": "What do you call a writer named Will that is always asking questions?",
+    "answer": "A William Faulkner."
+  },
+  {
+    "id": 67,
+    "question": "What do you call a fish that wears a bowtie?",
+    "answer": "So-fish-ticated."
+  },
+  {
+    "id": 68,
+    "question": "Why did the coffee file a police report?",
+    "answer": "It got mugged."
+  },
+  {
+    "id": 69,
+    "question": "What is brown and sticky?",
+    "answer": "A stick."
+  },
+  {
+    "id": 70,
+    "question": "What do you call a dinosaur that is sleeping?",
+    "answer": "A dino-snore."
+  },
+  {
+    "id": 71,
+    "question": "Why did the bicycle fall over?",
+    "answer": "Because it was two-tired."
+  },
+  {
+    "id": 72,
+    "question": "What is a computer's favorite snack?",
+    "answer": "Computer chips."
+  },
+  {
+    "id": 73,
+    "question": "What do you get if you cross a cat with a dark horse?",
+    "answer": "Kitty Perry."
+  },
+  {
+    "id": 74,
+    "question": "Where do you learn to make ice cream?",
+    "answer": "Sundae school."
+  },
+  {
+    "id": 75,
+    "question": "Why was the baby strawberry crying?",
+    "answer": "Because his parents were in a jam."
+  },
+  {
+    "id": 76,
+    "question": "What did the big flower say to the little flower?",
+    "answer": "What's up, bud?"
+  },
+  {
+    "id": 77,
+    "question": "What did the left eye say to the right eye?",
+    "answer": "Between you and me, something smells."
+  },
+  {
+    "id": 78,
+    "question": "How do you make an octopus laugh?",
+    "answer": "With ten-tickles."
+  },
+  {
+    "id": 79,
+    "question": "What do you call a factory that makes okay products?",
+    "answer": "A satisfactory."
+  },
+  {
+    "id": 80,
+    "question": "Why did the invisible man turn down the job offer?",
+    "answer": "He couldn't see himself doing it."
+  },
+  {
+    "id": 81,
+    "question": "What has more letters than the alphabet?",
+    "answer": "The post office."
+  },
+  {
+    "id": 82,
+    "question": "Why did the calendar get fired?",
+    "answer": "It took too many days off."
+  },
+  {
+    "id": 83,
+    "question": "How does a scientist freshen their breath?",
+    "answer": "With experi-mints."
+  },
+  {
+    "id": 84,
+    "question": "What do you call a cow with a twitch?",
+    "answer": "Beef jerky."
+  },
+  {
+    "id": 85,
+    "question": "What do you call a toothless bear?",
+    "answer": "A gummy bear."
+  },
+  {
+    "id": 86,
+    "question": "Why do seagulls fly over the sea?",
+    "answer": "Because if they flew over the bay, they'd be bagels."
+  },
+  {
+    "id": 87,
+    "question": "What's the difference between a guitar and a fish?",
+    "answer": "You can't tuna fish."
+  },
+  {
+    "id": 88,
+    "question": "Why did the student throw his watch out the window?",
+    "answer": "He wanted to see time fly."
+  },
+  {
+    "id": 89,
+    "question": "What do you call a magic owl?",
+    "answer": "Hoodini."
+  },
+  {
+    "id": 90,
+    "question": "Why was the cookie sad?",
+    "answer": "Because its mom was a wafer so long."
+  },
+  {
+    "id": 91,
+    "question": "What do you call a king's fart?",
+    "answer": "A noble gas."
+  },
+  {
+    "id": 92,
+    "question": "What did the paper say to the pencil?",
+    "answer": "Write on!"
+  },
+  {
+    "id": 93,
+    "question": "Why are frogs so happy?",
+    "answer": "They eat whatever bugs them."
+  },
+  {
+    "id": 94,
+    "question": "What do you call a story about a broken pencil?",
+    "answer": "It's pointless."
+  },
+  {
+    "id": 95,
+    "question": "What kind of shoes do ninjas wear?",
+    "answer": "Sneakers."
+  },
+  {
+    "id": 96,
+    "question": "What do you call a dear with no eyes?",
+    "answer": "No eye-deer."
+  },
+  {
+    "id": 97,
+    "question": "Why can't you hear a pterodactyl go to the bathroom?",
+    "answer": "Because the \"P\" is silent."
+  },
+  {
+    "id": 98,
+    "question": "What do you call someone who sees a robbery at an Apple store?",
+    "answer": "An iWitness."
+  },
+  {
+    "id": 99,
+    "question": "What is a tornado's favorite game?",
+    "answer": "Twister."
+  },
+  {
+    "id": 100,
+    "question": "Where do fish keep their money?",
+    "answer": "In a riverbank."
+  },
+  {
+    "id": 101,
+    "question": "Why did the mushroom go to the party?",
+    "answer": "Because he was a fungi!"
+  },
+  {
+    "id": 102,
+    "question": "What do you call a snowman party?",
+    "answer": "A snowball."
+  },
+  {
+    "id": 103,
+    "question": "What did one traffic light say to the other?",
+    "answer": "Don't look! I'm changing."
+  },
+  {
+    "id": 104,
+    "question": "Why was the broom late for school?",
+    "answer": "It over-swept."
+  },
+  {
+    "id": 105,
+    "question": "What do you call a bee that can't make up its mind?",
+    "answer": "A maybee."
+  },
+  {
+    "id": 106,
+    "question": "What kind of key opens a banana?",
+    "answer": "A monkey."
+  },
+  {
+    "id": 107,
+    "question": "Why don't eggs tell jokes?",
+    "answer": "They'd crack each other up."
+  },
+  {
+    "id": 108,
+    "question": "Why did the dad put his money in the freezer?",
+    "answer": "He wanted cold hard cash!"
+  },
+  {
+    "id": 109,
+    "question": "What do you get if you cross a sheep and a kangaroo?",
+    "answer": "A woolly jumper."
+  },
+  {
+    "id": 110,
+    "question": "What did the sink say to the water faucet?",
+    "answer": "You're a real drip."
+  },
+  {
+    "id": 111,
+    "question": "What's a skeleton's favorite instrument?",
+    "answer": "The trom-bone."
+  },
+  {
+    "id": 112,
+    "question": "Why did the computer go to the doctor?",
+    "answer": "It had a virus."
+  },
+  {
+    "id": 113,
+    "question": "What do you call a sad cup of coffee?",
+    "answer": "Depresso."
+  },
+  {
+    "id": 114,
+    "question": "What has a face and two hands but no arms or legs?",
+    "answer": "A clock."
+  },
+  {
+    "id": 115,
+    "question": "What do you call a belt made of watches?",
+    "answer": "A waist of time."
+  },
+  {
+    "id": 116,
+    "question": "What kind of lion can't roar?",
+    "answer": "A dandelion."
+  },
+  {
+    "id": 117,
+    "question": "Why can't you trust stairs?",
+    "answer": "They're always up to something."
+  },
+  {
+    "id": 118,
+    "question": "Why was the picture sent to jail?",
+    "answer": "It was framed."
+  },
+  {
+    "id": 119,
+    "question": "How does a vampire start a letter?",
+    "answer": "\"Tomb it may concern...\""
+  },
+  {
+    "id": 120,
+    "question": "What's black and white and read all over?",
+    "answer": "A newspaper."
+  },
+  {
+    "id": 121,
+    "question": "What's an owl's favorite subject?",
+    "answer": "Owl-gebra."
+  },
+  {
+    "id": 122,
+    "question": "What do you call a boomerang that doesn't come back?",
+    "answer": "A stick."
+  },
+  {
+    "id": 123,
+    "question": "What did the limestone say to the geologist?",
+    "answer": "Don't take me for granite!"
+  },
+  {
+    "id": 124,
+    "question": "Why did the bee get married?",
+    "answer": "He found his honey."
+  },
+  {
+    "id": 125,
+    "question": "What do you call a cow with no legs?",
+    "answer": "Ground beef."
+  },
+  {
+    "id": 126,
+    "question": "How do you stop a bull from charging?",
+    "answer": "You unplug it."
+  },
+  {
+    "id": 127,
+    "question": "Why did the man get fired from the calendar factory?",
+    "answer": "He took a couple of days off."
+  },
+  {
+    "id": 128,
+    "question": "What do you call an empty can of soda?",
+    "answer": "Pop-tastic."
+  },
+  {
+    "id": 129,
+    "question": "What do you call a bird that is sad?",
+    "answer": "A bluebird."
+  },
+  {
+    "id": 130,
+    "question": "Why was the little strawberry crying?",
+    "answer": "His parents were in a jam."
+  },
+  {
+    "id": 131,
+    "question": "What do you call two birds in love?",
+    "answer": "Tweethearts."
+  },
+  {
+    "id": 132,
+    "question": "Why did the scarecrow stand-up comedian fail?",
+    "answer": "Because his jokes were too corny."
+  },
+  {
+    "id": 133,
+    "question": "What do you call a dinosaur with an extensive vocabulary?",
+    "answer": "A thesaurus."
+  },
+  {
+    "id": 134,
+    "question": "What's a pirate's favorite subject?",
+    "answer": "Arrrrrrt!"
+  },
+  {
+    "id": 135,
+    "question": "What do you call a pile of cats?",
+    "answer": "A meow-ntain."
+  },
+  {
+    "id": 136,
+    "question": "Why did the tree go to the dentist?",
+    "answer": "It needed a root canal."
+  },
+  {
+    "id": 137,
+    "question": "How can you tell if a vampire is sick?",
+    "answer": "By how much he is coffin."
+  },
+  {
+    "id": 138,
+    "question": "What has a neck but no head?",
+    "answer": "A bottle."
+  },
+  {
+    "id": 139,
+    "question": "What did the police officer say to his belly button?",
+    "answer": "You're under a vest!"
+  },
+  {
+    "id": 140,
+    "question": "What do you call a sleeping piece of paper?",
+    "answer": "A napkin."
+  },
+  {
+    "id": 141,
+    "question": "What do you call a lazy person in a canoe?",
+    "answer": "A paddle-dragger."
+  },
+  {
+    "id": 142,
+    "question": "What do you get when you throw a bunch of books into the ocean?",
+    "answer": "A title wave."
+  },
+  {
+    "id": 143,
+    "question": "Why are fish so smart?",
+    "answer": "Because they live in schools."
+  },
+  {
+    "id": 144,
+    "question": "What do you call a thieving alligator?",
+    "answer": "A crook-odile."
+  },
+  {
+    "id": 145,
+    "question": "What animal is always at a baseball game?",
+    "answer": "A bat."
+  },
+  {
+    "id": 146,
+    "question": "What did the stamp say to the envelope?",
+    "answer": "Stick with me and we'll go places."
+  },
+  {
+    "id": 147,
+    "question": "How do you talk to a giant?",
+    "answer": "Use big words."
+  },
+  {
+    "id": 148,
+    "question": "Why did the bubble gum cross the road?",
+    "answer": "It was stuck to the chicken's foot."
+  },
+  {
+    "id": 149,
+    "question": "What is green and has wheels?",
+    "answer": "Grass. I lied about the wheels."
+  },
+  {
+    "id": 150,
+    "question": "What kind of clothes do clouds wear?",
+    "answer": "Thunderwear."
+  },
+  {
+    "id": 151,
+    "question": "What do you call a robot that takes the long way around?",
+    "answer": "R2-Detour."
+  },
+  {
+    "id": 152,
+    "question": "Why did the singer climb a ladder?",
+    "answer": "To reach the high notes."
+  },
+  {
+    "id": 153,
+    "question": "Where does a sheep go for a haircut?",
+    "answer": "The baa-baa shop."
+  },
+  {
+    "id": 154,
+    "question": "Why did the cookie go to the hospital?",
+    "answer": "He felt crummy."
+  },
+  {
+    "id": 155,
+    "question": "What did the fisherman say to the magician?",
+    "answer": "Pick a cod, any cod."
+  },
+  {
+    "id": 156,
+    "question": "What do you call a dog that is a scientist?",
+    "answer": "A lab-oratory retriever."
+  },
+  {
+    "id": 157,
+    "question": "Why are ghosts such bad liars?",
+    "answer": "Because you can see right through them."
+  },
+  {
+    "id": 158,
+    "question": "What do you call a shoe made from a banana?",
+    "answer": "A slipper."
+  },
+  {
+    "id": 159,
+    "question": "What do you do if your dog chews a dictionary?",
+    "answer": "Take the words right out of his mouth."
+  },
+  {
+    "id": 160,
+    "question": "What do you call a group of disorganized cats?",
+    "answer": "A cat-astrophe."
+  },
+  {
+    "id": 161,
+    "question": "Why did the boy bring a ladder to the bar?",
+    "answer": "He heard the drinks were on the house."
+  },
+  {
+    "id": 162,
+    "question": "What's the best way to watch a fly-fishing tournament?",
+    "answer": "Live stream."
+  },
+  {
+    "id": 163,
+    "question": "What did one plate say to the other plate?",
+    "answer": "Dinner is on me."
+  },
+  {
+    "id": 164,
+    "question": "What do you call a curious baby bird?",
+    "answer": "A peeping tom."
+  },
+  {
+    "id": 165,
+    "question": "Why did the orange stop in the middle of the road?",
+    "answer": "It ran out of juice."
+  },
+  {
+    "id": 166,
+    "question": "What kind of nut has no shell?",
+    "answer": "A doughnut."
+  },
+  {
+    "id": 167,
+    "question": "How do you get a squirrel to like you?",
+    "answer": "Act like a nut."
+  },
+  {
+    "id": 168,
+    "question": "What do you call a goat who likes to paint?",
+    "answer": "Vincent van Goat."
+  },
+  {
+    "id": 169,
+    "question": "Why was the stadium so cold?",
+    "answer": "It was full of fans."
+  },
+  {
+    "id": 170,
+    "question": "What did the baby corn say to the mama corn?",
+    "answer": "\"Where's pop corn?\""
+  },
+  {
+    "id": 171,
+    "question": "How do you make a lemon drop?",
+    "answer": "Just let it fall."
+  },
+  {
+    "id": 172,
+    "question": "What do you call a snail on a ship?",
+    "answer": "A snailor."
+  },
+  {
+    "id": 173,
+    "question": "Why couldn't the green pepper practice archery?",
+    "answer": "Because it didn't habanero."
+  },
+  {
+    "id": 174,
+    "question": "What did the triangle say to the circle?",
+    "answer": "You're pointless."
+  },
+  {
+    "id": 175,
+    "question": "What do you call a parade of rabbits hopping backwards?",
+    "answer": "A receding hare-line."
+  },
+  {
+    "id": 176,
+    "question": "Why did the librarian get kicked off the plane?",
+    "answer": "Because it was overbooked."
+  },
+  {
+    "id": 177,
+    "question": "What do you call a number that can't stay in one place?",
+    "answer": "A roamin' numeral."
+  },
+  {
+    "id": 178,
+    "question": "Why do bees have sticky hair?",
+    "answer": "Because they use honeycombs."
+  },
+  {
+    "id": 179,
+    "question": "What did one hat say to the other?",
+    "answer": "You stay here, I'll go on a-head."
+  },
+  {
+    "id": 180,
+    "question": "Why did the melons have a big wedding?",
+    "answer": "Because they cantaloupe."
+  },
+  {
+    "id": 181,
+    "question": "What do you call a lazy doctor?",
+    "answer": "Dr. Do-little."
+  },
+  {
+    "id": 182,
+    "question": "What did the rug say to the floor?",
+    "answer": "Don't move, I've got you covered."
+  },
+  {
+    "id": 183,
+    "question": "What has four legs but can't walk?",
+    "answer": "A table."
+  },
+  {
+    "id": 184,
+    "question": "How do you make a squid laugh?",
+    "answer": "Give it ten-tickles."
+  },
+  {
+    "id": 185,
+    "question": "What do you call a lazy kangaroo?",
+    "answer": "Pouch potato."
+  },
+  {
+    "id": 186,
+    "question": "Why did the football coach go to the bank?",
+    "answer": "To get his quarterback."
+  },
+  {
+    "id": 187,
+    "question": "What falls in winter but never gets hurt?",
+    "answer": "Snow."
+  },
+  {
+    "id": 188,
+    "question": "How many tickles does it take to make an octopus laugh?",
+    "answer": "Ten tickles."
+  },
+  {
+    "id": 189,
+    "question": "Why don't they play poker in the jungle?",
+    "answer": "Too many cheetahs."
+  },
+  {
+    "id": 190,
+    "question": "What do you call a dog magician?",
+    "answer": "A labracadabrador."
+  },
+  {
+    "id": 191,
+    "question": "Why is it annoying to eat at a restaurant on the moon?",
+    "answer": "Because there's no atmosphere."
+  },
+  {
+    "id": 192,
+    "question": "What room do ghosts avoid?",
+    "answer": "The living room."
+  },
+  {
+    "id": 193,
+    "question": "How do you fix a broken tomato?",
+    "answer": "With tomato paste."
+  },
+  {
+    "id": 194,
+    "question": "What do you call a bear with no ears?",
+    "answer": "B."
+  },
+  {
+    "id": 195,
+    "question": "Why are spiders so smart?",
+    "answer": "They can find everything on the web."
+  },
+  {
+    "id": 196,
+    "question": "What do you call a pig that does karate?",
+    "answer": "A pork chop."
+  },
+  {
+    "id": 197,
+    "question": "What do you call a sleeping dinosaur?",
+    "answer": "A dino-snore."
+  },
+  {
+    "id": 198,
+    "question": "Why did the chewing gum cross the road?",
+    "answer": "It was stuck to the chicken's foot."
+  },
+  {
+    "id": 199,
+    "question": "What's the difference between a well-dressed man on a bicycle and a poorly-dressed man on a tricycle?",
+    "answer": "Attire."
+  },
+  {
+    "id": 200,
+    "question": "Why was the math book sad?",
+    "answer": "Because it had so many problems."
+  },
+  {
+    "id": 201,
+    "question": "Why was six afraid of seven?",
+    "answer": "Because seven eight nine!"
+  },
+  {
+    "id": 202,
+    "question": "What do you call a snowman with a six-pack?",
+    "answer": "An abdominal snowman."
+  },
+  {
+    "id": 203,
+    "question": "Why can't a leopard hide?",
+    "answer": "Because he's always spotted."
+  },
+  {
+    "id": 204,
+    "question": "What kind of car does an egg drive?",
+    "answer": "A Yolkswagen."
+  },
+  {
+    "id": 205,
+    "question": "What's a foot long and slippery?",
+    "answer": "A slipper."
+  },
+  {
+    "id": 206,
+    "question": "What do you call a nervous javelin thrower?",
+    "answer": "Shakespeare."
+  },
+  {
+    "id": 207,
+    "question": "Why did the baby cross the road?",
+    "answer": "To get to the playground."
+  },
+  {
+    "id": 208,
+    "question": "What did the spider do on the computer?",
+    "answer": "It made a website."
+  },
+  {
+    "id": 209,
+    "question": "What do you call a Wookiee with chocolate in its hair?",
+    "answer": "A chocolate chip Wookiee."
+  },
+  {
+    "id": 210,
+    "question": "What is an alligator's favorite drink?",
+    "answer": "Gator-ade."
+  },
+  {
+    "id": 211,
+    "question": "Why did the scarecrow get a promotion?",
+    "answer": "He was outstanding in his field."
+  },
+  {
+    "id": 212,
+    "question": "What's a vampire's favorite fruit?",
+    "answer": "A neck-tarine."
+  },
+  {
+    "id": 213,
+    "question": "What do you call an elephant that doesn't matter?",
+    "answer": "An irrelephant."
+  },
+  {
+    "id": 214,
+    "question": "What do you call a deer with no eyes and no legs?",
+    "answer": "Still no eye-deer."
+  },
+  {
+    "id": 215,
+    "question": "What do you call a cheese that likes to shoot hoops?",
+    "answer": "Swiss cheese."
+  },
+  {
+    "id": 216,
+    "question": "How do you know when a clock is hungry?",
+    "answer": "It goes back for seconds."
+  },
+  {
+    "id": 217,
+    "question": "What did the mailman say to the mailbox?",
+    "answer": "I've got a letter for you."
+  },
+  {
+    "id": 218,
+    "question": "Why did the banana go to the doctor?",
+    "answer": "Because it wasn't peeling well."
+  },
+  {
+    "id": 219,
+    "question": "What do you call a lazy person at a construction site?",
+    "answer": "A builder-dozer."
+  },
+  {
+    "id": 220,
+    "question": "What do you call a factory that sells passable products?",
+    "answer": "A satisfactory."
+  },
+  {
+    "id": 221,
+    "question": "What's brown, hairy, and wears sunglasses?",
+    "answer": "A coconut on vacation."
+  },
+  {
+    "id": 222,
+    "question": "Why did the statue get a ticket?",
+    "answer": "For a parking violation."
+  },
+  {
+    "id": 223,
+    "question": "What do you call a grumpy cow?",
+    "answer": "Mooo-dy."
+  },
+  {
+    "id": 224,
+    "question": "What do you get when you cross a lemon and a cat?",
+    "answer": "A sour puss."
+  },
+  {
+    "id": 225,
+    "question": "Why did the bicycle take a nap?",
+    "answer": "Because it was two-tired."
+  },
+  {
+    "id": 226,
+    "question": "What do you call a bear that is stuck in the rain?",
+    "answer": "A drizzly bear."
+  },
+  {
+    "id": 227,
+    "question": "How does a lawyer say goodbye?",
+    "answer": "I'll be suing you!"
+  },
+  {
+    "id": 228,
+    "question": "What do you call a fish that needs help with its vocals?",
+    "answer": "A fish that needs a-tuna-up."
+  },
+  {
+    "id": 229,
+    "question": "What's the best way to carve wood?",
+    "answer": "Whittle by whittle."
+  },
+  {
+    "id": 230,
+    "question": "What do you call a nosey pepper?",
+    "answer": "Jalapeño business."
+  },
+  {
+    "id": 231,
+    "question": "What did the sea say to the iceberg?",
+    "answer": "Nothing, it just waved."
+  },
+  {
+    "id": 232,
+    "question": "Why was the runner so good at telling jokes?",
+    "answer": "Because he had a running gag."
+  },
+  {
+    "id": 233,
+    "question": "What do you call a lazy kangaroo's baby?",
+    "answer": "A pouch potato."
+  },
+  {
+    "id": 234,
+    "question": "What's a pirate's favorite movie?",
+    "answer": "Booty and the Beast."
+  },
+  {
+    "id": 235,
+    "question": "Why did the cell phone get glasses?",
+    "answer": "It lost all its contacts."
+  },
+  {
+    "id": 236,
+    "question": "What do you call a group of singing turtles?",
+    "answer": "A shell-ebration."
+  },
+  {
+    "id": 237,
+    "question": "Why did the gardener plant a light bulb?",
+    "answer": "He wanted to grow a power plant."
+  },
+  {
+    "id": 238,
+    "question": "What has four wheels and flies?",
+    "answer": "A garbage truck."
+  },
+  {
+    "id": 239,
+    "question": "Why did the students like their teacher?",
+    "answer": "Because she had a lot of class."
+  },
+  {
+    "id": 240,
+    "question": "What do you call a bird that's a comedian?",
+    "answer": "A laughing gull."
+  },
+  {
+    "id": 241,
+    "question": "What do you call a group of musical whales?",
+    "answer": "An orca-stra."
+  },
+  {
+    "id": 242,
+    "question": "What do you call a sad raspberry?",
+    "answer": "A blue-berry."
+  },
+  {
+    "id": 243,
+    "question": "What do you call a sleeping car?",
+    "answer": "A car-napper."
+  },
+  {
+    "id": 244,
+    "question": "Why did the math book look so sad?",
+    "answer": "Because it was full of problems."
+  },
+  {
+    "id": 245,
+    "question": "What do you call a wolf that is aware of its surroundings?",
+    "answer": "Aware wolf."
+  },
+  {
+    "id": 246,
+    "question": "What do you call a lazy chair?",
+    "answer": "A couch potato."
+  },
+  {
+    "id": 247,
+    "question": "What do you call a fake stone in Ireland?",
+    "answer": "A sham-rock."
+  },
+  {
+    "id": 248,
+    "question": "Why did the computer sneeze?",
+    "answer": "It had a bad case of windows."
+  },
+  {
+    "id": 249,
+    "question": "What do you call a boomerang that flies away?",
+    "answer": "A far-fetched idea."
+  },
+  {
+    "id": 250,
+    "question": "What did the janitor say when he jumped out of the closet?",
+    "answer": "\"Supplies!\""
+  },
+  {
+    "id": 251,
+    "question": "Why don't pirates take a shower before they walk the plank?",
+    "answer": "They just wash up on shore."
+  },
+  {
+    "id": 252,
+    "question": "What do you call a happy cowboy?",
+    "answer": "A jolly rancher."
+  },
+  {
+    "id": 253,
+    "question": "What do you call a person who is afraid of Santa Claus?",
+    "answer": "Claustrophobic."
+  },
+  {
+    "id": 254,
+    "question": "Why did the turkey cross the road?",
+    "answer": "To prove he wasn't chicken."
+  },
+  {
+    "id": 255,
+    "question": "What's the leading cause of dry skin?",
+    "answer": "Towels."
+  },
+  {
+    "id": 256,
+    "question": "Why did the teddy bear say no to dessert?",
+    "answer": "Because she was stuffed."
+  },
+  {
+    "id": 257,
+    "question": "What do you call a detective in bed?",
+    "answer": "Undercover."
+  },
+  {
+    "id": 258,
+    "question": "What do you call a smart group of trees?",
+    "answer": "A brainforest."
+  },
+  {
+    "id": 259,
+    "question": "Why did the gym close down?",
+    "answer": "It just didn't work out."
+  },
+  {
+    "id": 260,
+    "question": "What do you call a pencil with two erasers?",
+    "answer": "Pointless."
+  },
+  {
+    "id": 261,
+    "question": "What's a cat's favorite color?",
+    "answer": "Purr-ple."
+  },
+  {
+    "id": 262,
+    "question": "Why did the police arrest the turkey?",
+    "answer": "They suspected fowl play."
+  },
+  {
+    "id": 263,
+    "question": "What do you get from a forgetful cow?",
+    "answer": "Milk of amnesia."
+  },
+  {
+    "id": 264,
+    "question": "Why did the cookie go to the nurse?",
+    "answer": "Because he felt crummy."
+  },
+  {
+    "id": 265,
+    "question": "What's a ninja's favorite type of shoes?",
+    "answer": "Sneakers."
+  },
+  {
+    "id": 266,
+    "question": "What do you call a duck that gets all A's?",
+    "answer": "A wise quacker."
+  },
+  {
+    "id": 267,
+    "question": "Why are playing cards like wolves?",
+    "answer": "They come in packs."
+  },
+  {
+    "id": 268,
+    "question": "What is a photographer's favorite kind of dance?",
+    "answer": "The photo-boogie."
+  },
+  {
+    "id": 269,
+    "question": "Why do trees seem suspicious on sunny days?",
+    "answer": "They just seem a little shady."
+  },
+  {
+    "id": 270,
+    "question": "What do you call a dog that can tell time?",
+    "answer": "A watch dog."
+  },
+  {
+    "id": 271,
+    "question": "Why did the baker go on a diet?",
+    "answer": "Because he was making too much dough."
+  },
+  {
+    "id": 272,
+    "question": "What do you call a sad movie about strawberries?",
+    "answer": "The last straw."
+  },
+  {
+    "id": 273,
+    "question": "Why did the scientist install a knocker on his door?",
+    "answer": "He wanted to win the No-bell prize."
+  },
+  {
+    "id": 274,
+    "question": "What do you call a lazy person who works at a bakery?",
+    "answer": "A loafer."
+  },
+  {
+    "id": 275,
+    "question": "Why did the book join the police force?",
+    "answer": "To go undercover."
+  },
+  {
+    "id": 276,
+    "question": "What's a tree's favorite drink?",
+    "answer": "Root beer."
+  },
+  {
+    "id": 277,
+    "question": "Why did the farmer call his pig \"Ink\"?",
+    "answer": "Because it was always running out of the pen."
+  },
+  {
+    "id": 278,
+    "question": "What do you call a rabbit with fleas?",
+    "answer": "Bugs Bunny."
+  },
+  {
+    "id": 279,
+    "question": "What do you get if you cross a t-rex with a firework?",
+    "answer": "Dino-mite!"
+  },
+  {
+    "id": 280,
+    "question": "Why are chefs so mean?",
+    "answer": "They're always beating the eggs."
+  },
+  {
+    "id": 281,
+    "question": "What do you call a sleepwalking nun?",
+    "answer": "A roamin' Catholic."
+  },
+  {
+    "id": 282,
+    "question": "Why did the man put his car in the oven?",
+    "answer": "He wanted a hot rod."
+  },
+  {
+    "id": 283,
+    "question": "What do you call a ghost's true love?",
+    "answer": "His ghoul-friend."
+  },
+  {
+    "id": 284,
+    "question": "What do you call a chicken at the North Pole?",
+    "answer": "Lost."
+  },
+  {
+    "id": 285,
+    "question": "What do you call a line of men waiting for a haircut?",
+    "answer": "A barber-que."
+  },
+  {
+    "id": 286,
+    "question": "Why did the egg get a bad grade in school?",
+    "answer": "Because he was a little hard-boiled."
+  },
+  {
+    "id": 287,
+    "question": "What do you call a smart bee?",
+    "answer": "A spelling bee."
+  },
+  {
+    "id": 288,
+    "question": "Why are basketball courts always wet?",
+    "answer": "Because the players dribble on them."
+  },
+  {
+    "id": 289,
+    "question": "What do you call a pig that is a thief?",
+    "answer": "A hamburglar."
+  },
+  {
+    "id": 290,
+    "question": "Why did the student bring a ladder to class?",
+    "answer": "She wanted to go to high school."
+  },
+  {
+    "id": 291,
+    "question": "What is a snake's favorite subject?",
+    "answer": "Hisss-tory."
+  },
+  {
+    "id": 292,
+    "question": "What do you call a sad horse?",
+    "answer": "A neigh-sayer."
+  },
+  {
+    "id": 293,
+    "question": "Why do you never see elephants hiding in trees?",
+    "answer": "Because they're so good at it."
+  },
+  {
+    "id": 294,
+    "question": "What has four i's but can't see?",
+    "answer": "Mississippi."
+  },
+  {
+    "id": 295,
+    "question": "What do you call a belt that is also a watch?",
+    "answer": "A waist of time."
+  },
+  {
+    "id": 296,
+    "question": "What's a swimmer's favorite kind of story?",
+    "answer": "A long-pool-d short."
+  },
+  {
+    "id": 297,
+    "question": "What do you call a bear with a sore throat?",
+    "answer": "A hoarse bear."
+  },
+  {
+    "id": 298,
+    "question": "What do you call a fly with no wings?",
+    "answer": "A walk."
+  },
+  {
+    "id": 299,
+    "question": "Why was the burglar so good at basketball?",
+    "answer": "Because he was always making lay-ups."
+  },
+  {
+    "id": 300,
+    "question": "What do you call a shy pebble?",
+    "answer": "A little boulder."
+  },
+  {
+    "id": 301,
+    "question": "What do you call a cow that just had a baby?",
+    "answer": "De-calf-inated."
+  },
+  {
+    "id": 302,
+    "question": "Why do cows have hooves?",
+    "answer": "Because they lactose."
+  },
+  {
+    "id": 303,
+    "question": "What do you call a fish that practices medicine?",
+    "answer": "A sturgeon."
+  },
+  {
+    "id": 304,
+    "question": "Why don't ants get sick?",
+    "answer": "They have tiny ant-ibodies."
+  },
+  {
+    "id": 305,
+    "question": "What do you call a sleeping dinosaur?",
+    "answer": "A dino-snore."
+  },
+  {
+    "id": 306,
+    "question": "Why do dragons sleep during the day?",
+    "answer": "So they can fight knights."
+  },
+  {
+    "id": 307,
+    "question": "What do you call birds that stick together?",
+    "answer": "Velcrows."
+  },
+  {
+    "id": 308,
+    "question": "Where do sheep get their hair cut?",
+    "answer": "The baa-baa shop."
+  },
+  {
+    "id": 309,
+    "question": "Why couldn't the leopard play hide and seek?",
+    "answer": "Because he was always spotted."
+  },
+  {
+    "id": 310,
+    "question": "What do frogs order at restaurants?",
+    "answer": "French flies."
+  },
+  {
+    "id": 311,
+    "question": "Why are horses always so negative?",
+    "answer": "They say neigh to everything."
+  },
+  {
+    "id": 312,
+    "question": "What do you call a sheep doing karate?",
+    "answer": "A lamb chop."
+  },
+  {
+    "id": 313,
+    "question": "What do you call a well-balanced horse?",
+    "answer": "Stable."
+  },
+  {
+    "id": 314,
+    "question": "Why did the crab never share?",
+    "answer": "Because he's shellfish."
+  },
+  {
+    "id": 315,
+    "question": "What's a snake's favorite subject?",
+    "answer": "Hisss-tory."
+  },
+  {
+    "id": 316,
+    "question": "Why do pandas like old movies?",
+    "answer": "They're in black and white."
+  },
+  {
+    "id": 317,
+    "question": "What do you call a magic dog?",
+    "answer": "A Labracadabrador."
+  },
+  {
+    "id": 318,
+    "question": "What time do ducks wake up?",
+    "answer": "At the quack of dawn."
+  },
+  {
+    "id": 319,
+    "question": "What do you get when you cross a sheepdog with a rose?",
+    "answer": "A collie-flower."
+  },
+  {
+    "id": 320,
+    "question": "Why did the turkey join a band?",
+    "answer": "Because he had drumsticks."
+  },
+  {
+    "id": 321,
+    "question": "What's a frog's favorite game?",
+    "answer": "Leapfrog."
+  },
+  {
+    "id": 322,
+    "question": "Why are frogs always happy?",
+    "answer": "They eat whatever bugs them."
+  },
+  {
+    "id": 323,
+    "question": "What do you call a pile of kittens?",
+    "answer": "A meow-tain."
+  },
+  {
+    "id": 324,
+    "question": "Why don't owls study for tests?",
+    "answer": "They prefer to wing it."
+  },
+  {
+    "id": 325,
+    "question": "What do you call a monkey in a minefield?",
+    "answer": "A baboom."
+  },
+  {
+    "id": 326,
+    "question": "What do you get when you cross a centipede with a parrot?",
+    "answer": "A walkie-talkie."
+  },
+  {
+    "id": 327,
+    "question": "What's smarter than a talking parrot?",
+    "answer": "A spelling bee."
+  },
+  {
+    "id": 328,
+    "question": "Why are snails so slow?",
+    "answer": "They're carrying their whole house."
+  },
+  {
+    "id": 329,
+    "question": "What kind of dog does a scientist have?",
+    "answer": "A lab."
+  },
+  {
+    "id": 330,
+    "question": "Why don't sharks eat clowns?",
+    "answer": "They taste funny."
+  },
+  {
+    "id": 331,
+    "question": "What's a cat's favorite button on the TV remote?",
+    "answer": "Paws."
+  },
+  {
+    "id": 332,
+    "question": "Why did the dog sit in the shade?",
+    "answer": "He didn't want to be a hot dog."
+  },
+  {
+    "id": 333,
+    "question": "What do you call a lazy baby kangaroo?",
+    "answer": "A pouch potato."
+  },
+  {
+    "id": 334,
+    "question": "Why do bees have sticky hair?",
+    "answer": "They use honeycombs."
+  },
+  {
+    "id": 335,
+    "question": "What do you call an alligator in a vest?",
+    "answer": "An investigator."
+  },
+  {
+    "id": 336,
+    "question": "Why don't lobsters share their food?",
+    "answer": "They're too shellfish."
+  },
+  {
+    "id": 337,
+    "question": "What do you call a deer with no eyes?",
+    "answer": "No idea."
+  },
+  {
+    "id": 338,
+    "question": "What do you call a fish wearing a bow tie?",
+    "answer": "So-fish-ticated."
+  },
+  {
+    "id": 339,
+    "question": "What do you call two birds in love?",
+    "answer": "Tweethearts."
+  },
+  {
+    "id": 340,
+    "question": "What's a deer's favorite type of story?",
+    "answer": "A fairy tail."
+  },
+  {
+    "id": 341,
+    "question": "Why do elephants never use computers?",
+    "answer": "They're afraid of the mouse."
+  },
+  {
+    "id": 342,
+    "question": "What do you call a bear with no shoes?",
+    "answer": "Bearfoot."
+  },
+  {
+    "id": 343,
+    "question": "Why did the cow go to space?",
+    "answer": "To see the moooon."
+  },
+  {
+    "id": 344,
+    "question": "What do you call a rabbit with fleas?",
+    "answer": "Bugs Bunny."
+  },
+  {
+    "id": 345,
+    "question": "Why don't fish ever do well in school?",
+    "answer": "They're always swimming below C level."
+  },
+  {
+    "id": 346,
+    "question": "What do you call a fish with no eyes?",
+    "answer": "Fsh."
+  },
+  {
+    "id": 347,
+    "question": "What do you get when you cross a bunny and a leek?",
+    "answer": "A bunion."
+  },
+  {
+    "id": 348,
+    "question": "Why don't elephants like playing cards?",
+    "answer": "Because of all the cheetahs."
+  },
+  {
+    "id": 349,
+    "question": "What do you call a sleeping dinosaur?",
+    "answer": "A dino-snore."
+  },
+  {
+    "id": 350,
+    "question": "What do you call a gorilla wearing earmuffs?",
+    "answer": "Anything you want, he can't hear you."
+  },
+  {
+    "id": 351,
+    "question": "Why did the chicken go to the séance?",
+    "answer": "To talk to the other side."
+  },
+  {
+    "id": 352,
+    "question": "What do you call a fly without wings?",
+    "answer": "A walk."
+  },
+  {
+    "id": 353,
+    "question": "Why don't giraffes like fast food?",
+    "answer": "Because they can't catch it."
+  },
+  {
+    "id": 354,
+    "question": "What's a wolf's favorite holiday?",
+    "answer": "Howl-oween."
+  },
+  {
+    "id": 355,
+    "question": "Why did the octopus beat the shark in a fight?",
+    "answer": "It was well armed."
+  },
+  {
+    "id": 356,
+    "question": "What do you call a parade of rabbits hopping backward?",
+    "answer": "A receding hareline."
+  },
+  {
+    "id": 357,
+    "question": "Why don't oysters donate to charity?",
+    "answer": "They're shellfish."
+  },
+  {
+    "id": 358,
+    "question": "What do you call a pig that does karate?",
+    "answer": "A pork chop."
+  },
+  {
+    "id": 359,
+    "question": "Why don't elephants chew gum?",
+    "answer": "They do, just not in public."
+  },
+  {
+    "id": 360,
+    "question": "What do you call a cow in an earthquake?",
+    "answer": "A milkshake."
+  },
+  {
+    "id": 361,
+    "question": "What do you call a bear that's stuck in the rain?",
+    "answer": "A drizzly bear."
+  },
+  {
+    "id": 362,
+    "question": "Why did the lion eat the tightrope walker?",
+    "answer": "He wanted a well-balanced meal."
+  },
+  {
+    "id": 363,
+    "question": "What's an otter's favorite number?",
+    "answer": "Otter."
+  },
+  {
+    "id": 364,
+    "question": "What do you call a sleeping owl?",
+    "answer": "A nap-kin bird."
+  },
+  {
+    "id": 365,
+    "question": "Why did the squirrel swim on its back?",
+    "answer": "To keep its nuts dry."
+  },
+  {
+    "id": 366,
+    "question": "What do you call a thirsty dog?",
+    "answer": "A dry-huahua."
+  },
+  {
+    "id": 367,
+    "question": "Why did the snake cross the road?",
+    "answer": "To get to the other ssside."
+  },
+  {
+    "id": 368,
+    "question": "What do you call a three-humped camel?",
+    "answer": "Pregnant."
+  },
+  {
+    "id": 369,
+    "question": "Why don't cats play poker in the jungle?",
+    "answer": "Too many cheetahs."
+  },
+  {
+    "id": 370,
+    "question": "What did the buffalo say when his son left?",
+    "answer": "Bison."
+  },
+  {
+    "id": 371,
+    "question": "Why are teddy bears never hungry?",
+    "answer": "They're always stuffed."
+  },
+  {
+    "id": 372,
+    "question": "What do you call a group of disorganized cats?",
+    "answer": "A cat-astrophe."
+  },
+  {
+    "id": 373,
+    "question": "Why did the whale blush?",
+    "answer": "It saw the ocean's bottom."
+  },
+  {
+    "id": 374,
+    "question": "What do you call a dinosaur with an extensive vocabulary?",
+    "answer": "A thesaurus."
+  },
+  {
+    "id": 375,
+    "question": "Why don't elephants ride bicycles?",
+    "answer": "They don't have thumbs for the bell."
+  },
+  {
+    "id": 376,
+    "question": "What do you call a penguin in the desert?",
+    "answer": "Lost."
+  },
+  {
+    "id": 377,
+    "question": "Why did the rooster cross the road?",
+    "answer": "To prove he wasn't chicken."
+  },
+  {
+    "id": 378,
+    "question": "What do you call a pig that tells jokes?",
+    "answer": "A ham."
+  },
+  {
+    "id": 379,
+    "question": "Why don't lobsters share?",
+    "answer": "They're shellfish."
+  },
+  {
+    "id": 380,
+    "question": "What do you call a cow with no legs?",
+    "answer": "Ground beef."
+  },
+  {
+    "id": 381,
+    "question": "Why did the cat sit on the computer?",
+    "answer": "To keep an eye on the mouse."
+  },
+  {
+    "id": 382,
+    "question": "What do you call a spider that just got married?",
+    "answer": "A newlyweb."
+  },
+  {
+    "id": 383,
+    "question": "Why don't crickets ever go to movies?",
+    "answer": "They prefer to watch their own shows."
+  },
+  {
+    "id": 384,
+    "question": "What do you call a rabbit that tells good jokes?",
+    "answer": "A funny bunny."
+  },
+  {
+    "id": 385,
+    "question": "Why did the horse go behind the tree?",
+    "answer": "To change his jockeys."
+  },
+  {
+    "id": 386,
+    "question": "What do you call a lazy kangaroo?",
+    "answer": "A pouch potato."
+  },
+  {
+    "id": 387,
+    "question": "Why don't penguins fly?",
+    "answer": "They're not tall enough to be pilots."
+  },
+  {
+    "id": 388,
+    "question": "What do you call a well-dressed lion?",
+    "answer": "A dandy lion."
+  },
+  {
+    "id": 389,
+    "question": "Why did the frog take the bus to work?",
+    "answer": "His car got toad."
+  },
+  {
+    "id": 390,
+    "question": "What do you call a bear with no teeth?",
+    "answer": "A gummy bear."
+  },
+  {
+    "id": 391,
+    "question": "Why don't crocodiles like fast food?",
+    "answer": "They can't catch it."
+  },
+  {
+    "id": 392,
+    "question": "What do you call a nervous porcupine?",
+    "answer": "A panic button."
+  },
+  {
+    "id": 393,
+    "question": "Why did the peacock cross the road?",
+    "answer": "To show off his beautiful plumage."
+  },
+  {
+    "id": 394,
+    "question": "What do you call a snake that builds things?",
+    "answer": "A boa constructor."
+  },
+  {
+    "id": 395,
+    "question": "Why don't hummingbirds hum?",
+    "answer": "Because they don't know the words."
+  },
+  {
+    "id": 396,
+    "question": "What do you call a happy cowboy?",
+    "answer": "A jolly rancher."
+  },
+  {
+    "id": 397,
+    "question": "Why did the chicken cross the playground?",
+    "answer": "To get to the other slide."
+  },
+  {
+    "id": 398,
+    "question": "What do you call a fish that needs help singing?",
+    "answer": "Auto-tuna."
+  },
+  {
+    "id": 399,
+    "question": "Why don't elephants ever forget?",
+    "answer": "They have outstanding memories."
+  },
+  {
+    "id": 400,
+    "question": "Why did the cookie go to the hospital?",
+    "answer": "Because it felt crummy."
+  },
+  {
+    "id": 401,
+    "question": "What do you call cheese that isn't yours?",
+    "answer": "Nacho cheese."
+  },
+  {
+    "id": 402,
+    "question": "Why did the banana go to the doctor?",
+    "answer": "It wasn't peeling well."
+  },
+  {
+    "id": 403,
+    "question": "What's orange and sounds like a parrot?",
+    "answer": "A carrot."
+  },
+  {
+    "id": 404,
+    "question": "Why did the tomato blush?",
+    "answer": "It saw the salad dressing."
+  },
+  {
+    "id": 405,
+    "question": "What do you call a sad cup of coffee?",
+    "answer": "Depresso."
+  },
+  {
+    "id": 406,
+    "question": "Why don't eggs tell jokes?",
+    "answer": "They'd crack each other up."
+  },
+  {
+    "id": 407,
+    "question": "What kind of nut has no shell?",
+    "answer": "A doughnut."
+  },
+  {
+    "id": 408,
+    "question": "Why did the grape stop in the middle of the road?",
+    "answer": "It ran out of juice."
+  },
+  {
+    "id": 409,
+    "question": "What do you call a nosy pepper?",
+    "answer": "Jalapeño business."
+  },
+  {
+    "id": 410,
+    "question": "Why did the orange stop?",
+    "answer": "It ran out of juice."
+  },
+  {
+    "id": 411,
+    "question": "What's a pickle's life philosophy?",
+    "answer": "Dill with it."
+  },
+  {
+    "id": 412,
+    "question": "Why don't melons get married?",
+    "answer": "Because they cantaloupe."
+  },
+  {
+    "id": 413,
+    "question": "What do you call a fake potato?",
+    "answer": "An imi-tater."
+  },
+  {
+    "id": 414,
+    "question": "Why did the lettuce win the race?",
+    "answer": "It was a head."
+  },
+  {
+    "id": 415,
+    "question": "What do you call a dancing banana?",
+    "answer": "A banana split."
+  },
+  {
+    "id": 416,
+    "question": "Why don't potatoes make good secret agents?",
+    "answer": "They have too many eyes."
+  },
+  {
+    "id": 417,
+    "question": "What's a taco's favorite type of music?",
+    "answer": "Salsa."
+  },
+  {
+    "id": 418,
+    "question": "Why did the apple go to the gym?",
+    "answer": "To work on its core."
+  },
+  {
+    "id": 419,
+    "question": "What do you call a cheese that plays guitar?",
+    "answer": "String cheese."
+  },
+  {
+    "id": 420,
+    "question": "Why don't eggs play sports?",
+    "answer": "They might crack under pressure."
+  },
+  {
+    "id": 421,
+    "question": "What do you call a sleeping pizza?",
+    "answer": "A PIZZZZa."
+  },
+  {
+    "id": 422,
+    "question": "What's a cookie's favorite type of music?",
+    "answer": "Crumb and bass."
+  },
+  {
+    "id": 423,
+    "question": "Why did the mushroom get invited to parties?",
+    "answer": "He was a fungi."
+  },
+  {
+    "id": 424,
+    "question": "What do you call a vegetable that's always rushing?",
+    "answer": "A rad-ish."
+  },
+  {
+    "id": 425,
+    "question": "Why don't bananas ever feel lonely?",
+    "answer": "They hang in bunches."
+  },
+  {
+    "id": 426,
+    "question": "What do you call a corn in the army?",
+    "answer": "A kernel."
+  },
+  {
+    "id": 427,
+    "question": "What's a sandwich's favorite type of music?",
+    "answer": "Wrap."
+  },
+  {
+    "id": 428,
+    "question": "Why did the raisin go to school?",
+    "answer": "To become grape-r."
+  },
+  {
+    "id": 429,
+    "question": "What do you call a sleepy herb?",
+    "answer": "A nap-mint."
+  },
+  {
+    "id": 430,
+    "question": "Why don't crackers ever get stressed?",
+    "answer": "They stay crisp under pressure."
+  },
+  {
+    "id": 431,
+    "question": "What do you call bread that tells jokes?",
+    "answer": "Pun-pernickel."
+  },
+  {
+    "id": 432,
+    "question": "What's a pie's favorite movie?",
+    "answer": "Life of Pie."
+  },
+  {
+    "id": 433,
+    "question": "Why did the watermelon jump into the lake?",
+    "answer": "It wanted to be a water-melon."
+  },
+  {
+    "id": 434,
+    "question": "What do you call a chip that sings?",
+    "answer": "A crunch note."
+  },
+  {
+    "id": 435,
+    "question": "Why don't strawberries ever win races?",
+    "answer": "They're always in a jam."
+  },
+  {
+    "id": 436,
+    "question": "What do you call an angry carrot?",
+    "answer": "Steamed veggies."
+  },
+  {
+    "id": 437,
+    "question": "Why did the peanut go to the police?",
+    "answer": "It was a-salted."
+  },
+  {
+    "id": 438,
+    "question": "What do you call a waffle that can fly?",
+    "answer": "A plain waffle."
+  },
+  {
+    "id": 439,
+    "question": "Why don't beans ever win at poker?",
+    "answer": "They always spill."
+  },
+  {
+    "id": 440,
+    "question": "What do you call a romantic pasta?",
+    "answer": "A lover-oni."
+  },
+  {
+    "id": 441,
+    "question": "Why did the bread break up with the butter?",
+    "answer": "It was on a roll."
+  },
+  {
+    "id": 442,
+    "question": "What do you call a lemon that's a detective?",
+    "answer": "Sherlock Peels."
+  },
+  {
+    "id": 443,
+    "question": "Why don't avocados ever play cards?",
+    "answer": "They're always guac-ing around."
+  },
+  {
+    "id": 444,
+    "question": "What do you call a pretzel that's always complaining?",
+    "answer": "Salty."
+  },
+  {
+    "id": 445,
+    "question": "Why did the bacon laugh?",
+    "answer": "It was tickled crispy."
+  },
+  {
+    "id": 446,
+    "question": "What do you call a vegetable that's good at archery?",
+    "answer": "A peas-shooter."
+  },
+  {
+    "id": 447,
+    "question": "Why don't blueberries ever get lost?",
+    "answer": "They follow the preserves."
+  },
+  {
+    "id": 448,
+    "question": "What do you call a donut that's always late?",
+    "answer": "Glazed and confused."
+  },
+  {
+    "id": 449,
+    "question": "Why did the chocolate chip feel lonely?",
+    "answer": "It was chipper away from the pack."
+  },
+  {
+    "id": 450,
+    "question": "What do you call a pancake that tells jokes?",
+    "answer": "A pun-cake."
+  },
+  {
+    "id": 451,
+    "question": "Why don't onions ever win beauty contests?",
+    "answer": "They make everyone cry."
+  },
+  {
+    "id": 452,
+    "question": "What do you call a sweet potato that's smart?",
+    "answer": "A yam genius."
+  },
+  {
+    "id": 453,
+    "question": "Why did the cupcake go to school?",
+    "answer": "To get batter educated."
+  },
+  {
+    "id": 454,
+    "question": "What do you call a muffin that can juggle?",
+    "answer": "A stud-muffin."
+  },
+  {
+    "id": 455,
+    "question": "Why don't peppers ever get cold?",
+    "answer": "They're always in hot situations."
+  },
+  {
+    "id": 456,
+    "question": "What do you call a broccoli that's good at math?",
+    "answer": "A vegeta-brain."
+  },
+  {
+    "id": 457,
+    "question": "Why did the ketchup blush?",
+    "answer": "It saw the hot dog."
+  },
+  {
+    "id": 458,
+    "question": "What do you call a burrito that won't share?",
+    "answer": "Wrap-acious."
+  },
+  {
+    "id": 459,
+    "question": "Why don't lemons ever get invited to parties?",
+    "answer": "They're too sour."
+  },
+  {
+    "id": 460,
+    "question": "What do you call a talkative cereal?",
+    "answer": "Chatty Chex."
+  },
+  {
+    "id": 461,
+    "question": "Why did the spaghetti blush?",
+    "answer": "It saw the meatballs."
+  },
+  {
+    "id": 462,
+    "question": "What do you call a lazy fruit?",
+    "answer": "A couch-tato... wait, a lounge berry!"
+  },
+  {
+    "id": 463,
+    "question": "Why don't pickles ever win races?",
+    "answer": "They're in a pickle."
+  },
+  {
+    "id": 464,
+    "question": "What do you call a hot dog with nothing on it?",
+    "answer": "A frank."
+  },
+  {
+    "id": 465,
+    "question": "Why did the cake go to the doctor?",
+    "answer": "It was feeling crumb-y."
+  },
+  {
+    "id": 466,
+    "question": "What do you call a yogurt that tells stories?",
+    "answer": "A cultured narrator."
+  },
+  {
+    "id": 467,
+    "question": "Why don't peas ever argue?",
+    "answer": "They want to keep the peas."
+  },
+  {
+    "id": 468,
+    "question": "What do you call a soup that solves mysteries?",
+    "answer": "Broth-lock Holmes."
+  },
+  {
+    "id": 469,
+    "question": "Why did the French fry dance?",
+    "answer": "It cut loose."
+  },
+  {
+    "id": 470,
+    "question": "What do you call a milkshake that's always negative?",
+    "answer": "A downer shake."
+  },
+  {
+    "id": 471,
+    "question": "Why don't almonds ever get scared?",
+    "answer": "They're tough nuts."
+  },
+  {
+    "id": 472,
+    "question": "What do you call a happy lemon?",
+    "answer": "Zesty!"
+  },
+  {
+    "id": 473,
+    "question": "Why did the ice cream truck break down?",
+    "answer": "It had too many scoops."
+  },
+  {
+    "id": 474,
+    "question": "What do you call a polite piece of candy?",
+    "answer": "A sweet talker."
+  },
+  {
+    "id": 475,
+    "question": "Why don't celery stalks ever gossip?",
+    "answer": "They mind their own branches."
+  },
+  {
+    "id": 476,
+    "question": "What do you call a lazy vegetable?",
+    "answer": "A couch potato."
+  },
+  {
+    "id": 477,
+    "question": "Why did the fig get in trouble?",
+    "answer": "It was being fig-ety."
+  },
+  {
+    "id": 478,
+    "question": "What do you call a smart cookie?",
+    "answer": "One tough cookie."
+  },
+  {
+    "id": 479,
+    "question": "Why don't raisins ever complain?",
+    "answer": "They used to wine, but not anymore."
+  },
+  {
+    "id": 480,
+    "question": "What do you call a musical vegetable?",
+    "answer": "A beet boxer."
+  },
+  {
+    "id": 481,
+    "question": "Why did the syrup get stuck?",
+    "answer": "It was in a sticky situation."
+  },
+  {
+    "id": 482,
+    "question": "What do you call a bouncing fruit?",
+    "answer": "A cran-berry!"
+  },
+  {
+    "id": 483,
+    "question": "Why don't cucumbers ever panic?",
+    "answer": "They stay cool as a cucumber."
+  },
+  {
+    "id": 484,
+    "question": "What do you call a fancy cracker?",
+    "answer": "Upper crust."
+  },
+  {
+    "id": 485,
+    "question": "Why did the olive go to jail?",
+    "answer": "It was caught pit-pocketing."
+  },
+  {
+    "id": 486,
+    "question": "What do you call an artistic bread?",
+    "answer": "Toast-y."
+  },
+  {
+    "id": 487,
+    "question": "Why don't pears ever get into fights?",
+    "answer": "They're pair-aceful."
+  },
+  {
+    "id": 488,
+    "question": "What do you call a funny orange?",
+    "answer": "Peel-arious."
+  },
+  {
+    "id": 489,
+    "question": "Why did the mint get promoted?",
+    "answer": "It was very re-freshing."
+  },
+  {
+    "id": 490,
+    "question": "What do you call a detective fruit?",
+    "answer": "Sherlock Limes."
+  },
+  {
+    "id": 491,
+    "question": "Why don't pepperoni slices ever lie?",
+    "answer": "They're meat-honest."
+  },
+  {
+    "id": 492,
+    "question": "What do you call a philosophical bean?",
+    "answer": "A soy sage."
+  },
+  {
+    "id": 493,
+    "question": "Why did the butter get hired?",
+    "answer": "It was on a roll."
+  },
+  {
+    "id": 494,
+    "question": "What do you call a vegetable comedian?",
+    "answer": "Corn-y!"
+  },
+  {
+    "id": 495,
+    "question": "Why don't cashews ever get stressed?",
+    "answer": "They're naturally chill."
+  },
+  {
+    "id": 496,
+    "question": "What do you call a brave little tomato?",
+    "answer": "Plucky!"
+  },
+  {
+    "id": 497,
+    "question": "Why did the student eat his homework?",
+    "answer": "The teacher said it was a piece of cake."
+  },
+  {
+    "id": 498,
+    "question": "What's a math teacher's favorite place?",
+    "answer": "Times Square."
+  },
+  {
+    "id": 499,
+    "question": "Why was the math book sad?",
+    "answer": "It had too many problems."
+  },
+  {
+    "id": 500,
+    "question": "What do you call a teacher who never frowns?",
+    "answer": "A gladiator."
+  },
+  {
+    "id": 501,
+    "question": "Why did the pencil go to school?",
+    "answer": "To get sharper."
+  },
+  {
+    "id": 502,
+    "question": "What's a snake's favorite subject?",
+    "answer": "Hisss-tory."
+  },
+  {
+    "id": 503,
+    "question": "Why did the student bring a ladder?",
+    "answer": "To go to high school."
+  },
+  {
+    "id": 504,
+    "question": "What do you call a sleeping paper?",
+    "answer": "A napkin."
+  },
+  {
+    "id": 505,
+    "question": "Why was the broom late?",
+    "answer": "It over-swept."
+  },
+  {
+    "id": 506,
+    "question": "What's a witch's favorite subject?",
+    "answer": "Spelling."
+  },
+  {
+    "id": 507,
+    "question": "Why don't calculators ever get tired?",
+    "answer": "They're charged up."
+  },
+  {
+    "id": 508,
+    "question": "What do you call a broken pencil?",
+    "answer": "Pointless."
+  },
+  {
+    "id": 509,
+    "question": "Why did the eraser go to therapy?",
+    "answer": "Too many mistakes to deal with."
+  },
+  {
+    "id": 510,
+    "question": "What's a book's favorite season?",
+    "answer": "Fall (because of all the leaves)."
+  },
+  {
+    "id": 511,
+    "question": "Why don't pencils ever get lost?",
+    "answer": "They always have a point."
+  },
+  {
+    "id": 512,
+    "question": "What do you call a school supply that tells jokes?",
+    "answer": "A pun-cil."
+  },
+  {
+    "id": 513,
+    "question": "Why was the geography book popular?",
+    "answer": "It had all the right places."
+  },
+  {
+    "id": 514,
+    "question": "What do you call a singing computer?",
+    "answer": "A Dell."
+  },
+  {
+    "id": 515,
+    "question": "Why did the paper go to the doctor?",
+    "answer": "It was feeling torn."
+  },
+  {
+    "id": 516,
+    "question": "What's a library's favorite music?",
+    "answer": "Shh-azz."
+  },
+  {
+    "id": 517,
+    "question": "Why don't books ever get cold?",
+    "answer": "They have jackets."
+  },
+  {
+    "id": 518,
+    "question": "What do you call a broken crayon?",
+    "answer": "Still colorful."
+  },
+  {
+    "id": 519,
+    "question": "Why was the calendar popular?",
+    "answer": "It had lots of dates."
+  },
+  {
+    "id": 520,
+    "question": "What do you call a backpack that's late?",
+    "answer": "A slack-pack."
+  },
+  {
+    "id": 521,
+    "question": "Why don't scissors win arguments?",
+    "answer": "They cut to the point."
+  },
+  {
+    "id": 522,
+    "question": "What's a stapler's favorite food?",
+    "answer": "Staple food."
+  },
+  {
+    "id": 523,
+    "question": "Why was the glue in trouble?",
+    "answer": "Couldn't stick to rules."
+  },
+  {
+    "id": 524,
+    "question": "What do you call a sad highlighter?",
+    "answer": "A low-lighter."
+  },
+  {
+    "id": 525,
+    "question": "Why don't notebooks get lonely?",
+    "answer": "They're full of friends."
+  },
+  {
+    "id": 526,
+    "question": "What's a pencil sharpener's motto?",
+    "answer": "Stay sharp!"
+  },
+  {
+    "id": 527,
+    "question": "Why did the student study on an airplane?",
+    "answer": "To reach a higher education."
+  },
+  {
+    "id": 528,
+    "question": "What do you call a smart group of trees?",
+    "answer": "A brainforest."
+  },
+  {
+    "id": 529,
+    "question": "Why was the ruler always calm?",
+    "answer": "It could measure up to anything."
+  },
+  {
+    "id": 530,
+    "question": "What do you call a backpack with a PhD?",
+    "answer": "A smartpack."
+  },
+  {
+    "id": 531,
+    "question": "Why did the desk refuse to fight?",
+    "answer": "It wanted to stay stable."
+  },
+  {
+    "id": 532,
+    "question": "What do you call a happy classroom?",
+    "answer": "A joy-vision."
+  },
+  {
+    "id": 533,
+    "question": "Why don't maps ever argue?",
+    "answer": "They know their place."
+  },
+  {
+    "id": 534,
+    "question": "What do you call a singing pencil case?",
+    "answer": "A tun-eful case."
+  },
+  {
+    "id": 535,
+    "question": "Why was the whiteboard always optimistic?",
+    "answer": "It could always erase mistakes."
+  },
+  {
+    "id": 536,
+    "question": "What do you call a cool teacher?",
+    "answer": "A class act."
+  },
+  {
+    "id": 537,
+    "question": "Why did the crayon quit its job?",
+    "answer": "It felt burned out."
+  },
+  {
+    "id": 538,
+    "question": "What do you call a funny textbook?",
+    "answer": "A laugh-book."
+  },
+  {
+    "id": 539,
+    "question": "Why don't clocks get in trouble?",
+    "answer": "They're always on time."
+  },
+  {
+    "id": 540,
+    "question": "What do you call a sad library?",
+    "answer": "Booked up with tears."
+  },
+  {
+    "id": 541,
+    "question": "Why was the dictionary so smart?",
+    "answer": "It had all the words."
+  },
+  {
+    "id": 542,
+    "question": "What do you call a sleepy school?",
+    "answer": "A yawn-iversity."
+  },
+  {
+    "id": 543,
+    "question": "Why don't globes ever get dizzy?",
+    "answer": "They're used to spinning."
+  },
+  {
+    "id": 544,
+    "question": "What do you call a musical triangle?",
+    "answer": "An angle with jingles."
+  },
+  {
+    "id": 545,
+    "question": "Why was the protractor always right?",
+    "answer": "It knew all the angles."
+  },
+  {
+    "id": 546,
+    "question": "What do you call a compass that sings?",
+    "answer": "A tun-er."
+  },
+  {
+    "id": 547,
+    "question": "Why don't beakers ever spill secrets?",
+    "answer": "They're test tube-worthy."
+  },
+  {
+    "id": 548,
+    "question": "What do you call a smart sandwich?",
+    "answer": "A brain food."
+  },
+  {
+    "id": 549,
+    "question": "Why was the science lab cool?",
+    "answer": "Lots of degrees."
+  },
+  {
+    "id": 550,
+    "question": "What do you call a friendly exam?",
+    "answer": "A test-imonial."
+  },
+  {
+    "id": 551,
+    "question": "Why don't report cards lie?",
+    "answer": "The grades speak for themselves."
+  },
+  {
+    "id": 552,
+    "question": "What do you call a musical homework?",
+    "answer": "A note-worthy assignment."
+  },
+  {
+    "id": 553,
+    "question": "Why was the bookmark successful?",
+    "answer": "It knew its place."
+  },
+  {
+    "id": 554,
+    "question": "What do you call a laughing chalkboard?",
+    "answer": "Chalk full of joy."
+  },
+  {
+    "id": 555,
+    "question": "Why don't erasers hold grudges?",
+    "answer": "They wipe the slate clean."
+  },
+  {
+    "id": 556,
+    "question": "What do you call a smart locker?",
+    "answer": "Com-bin-ation genius."
+  },
+  {
+    "id": 557,
+    "question": "Why was the pen always confident?",
+    "answer": "It had a good point."
+  },
+  {
+    "id": 558,
+    "question": "What do you call a musical desk?",
+    "answer": "A tune-able."
+  },
+  {
+    "id": 559,
+    "question": "Why don't scissors get scared?",
+    "answer": "They're always sharp."
+  },
+  {
+    "id": 560,
+    "question": "What do you call a happy hallway?",
+    "answer": "A corridor of joy."
+  },
+  {
+    "id": 561,
+    "question": "Why was the gym always energetic?",
+    "answer": "Full of bouncing energy."
+  },
+  {
+    "id": 562,
+    "question": "What do you call a smart lunch?",
+    "answer": "Brain food."
+  },
+  {
+    "id": 563,
+    "question": "Why don't backpacks complain?",
+    "answer": "They carry their weight."
+  },
+  {
+    "id": 564,
+    "question": "What do you call a funny recess?",
+    "answer": "A giggle break."
+  },
+  {
+    "id": 565,
+    "question": "Why was the teacher proud?",
+    "answer": "The class was outstanding."
+  },
+  {
+    "id": 566,
+    "question": "What do you call a smart bus?",
+    "answer": "A scholar-ship."
+  },
+  {
+    "id": 567,
+    "question": "Why was the computer cold?",
+    "answer": "It left its Windows open."
+  },
+  {
+    "id": 568,
+    "question": "What do you call a computer superhero?",
+    "answer": "A screen saver."
+  },
+  {
+    "id": 569,
+    "question": "Why did the smartphone need glasses?",
+    "answer": "It lost all its contacts."
+  },
+  {
+    "id": 570,
+    "question": "What's a computer's favorite snack?",
+    "answer": "Microchips."
+  },
+  {
+    "id": 571,
+    "question": "Why don't robots ever panic?",
+    "answer": "They have nerves of steel."
+  },
+  {
+    "id": 572,
+    "question": "What do you call a sleeping computer?",
+    "answer": "A laptop."
+  },
+  {
+    "id": 573,
+    "question": "Why did the computer break up with the internet?",
+    "answer": "Too many connections."
+  },
+  {
+    "id": 574,
+    "question": "What's a phone's favorite music?",
+    "answer": "Ring tones."
+  },
+  {
+    "id": 575,
+    "question": "Why don't computers get hungry?",
+    "answer": "They have bytes."
+  },
+  {
+    "id": 576,
+    "question": "What do you call a singing computer?",
+    "answer": "A Dell."
+  },
+  {
+    "id": 577,
+    "question": "Why was the tablet down?",
+    "answer": "Low battery."
+  },
+  {
+    "id": 578,
+    "question": "What do you call a fake iPad?",
+    "answer": "A McPad."
+  },
+  {
+    "id": 579,
+    "question": "Why don't keyboards get tired?",
+    "answer": "They have space."
+  },
+  {
+    "id": 580,
+    "question": "What's a virus's favorite game?",
+    "answer": "Hide and go sick."
+  },
+  {
+    "id": 581,
+    "question": "Why did the mouse go to school?",
+    "answer": "To improve its click rate."
+  },
+  {
+    "id": 582,
+    "question": "What do you call a complaining computer?",
+    "answer": "Whine-dows."
+  },
+  {
+    "id": 583,
+    "question": "Why don't printers tell truth?",
+    "answer": "They make copies."
+  },
+  {
+    "id": 584,
+    "question": "What's a computer's favorite dance?",
+    "answer": "The disk-o."
+  },
+  {
+    "id": 585,
+    "question": "Why was the hard drive emotional?",
+    "answer": "Memory problems."
+  },
+  {
+    "id": 586,
+    "question": "What do you call a computer that knows karate?",
+    "answer": "A hard drive."
+  },
+  {
+    "id": 587,
+    "question": "Why did the Wi-Fi break up?",
+    "answer": "Lost connection."
+  },
+  {
+    "id": 588,
+    "question": "What do you call a musical phone?",
+    "answer": "A cell-o."
+  },
+  {
+    "id": 589,
+    "question": "Why don't USB drives get lost?",
+    "answer": "They stick around."
+  },
+  {
+    "id": 590,
+    "question": "What's a computer's favorite beat?",
+    "answer": "Techno."
+  },
+  {
+    "id": 591,
+    "question": "Why was the email upset?",
+    "answer": "It got spam."
+  },
+  {
+    "id": 592,
+    "question": "What do you call a smart TV?",
+    "answer": "Brilliant."
+  },
+  {
+    "id": 593,
+    "question": "Why don't batteries die?",
+    "answer": "They stay charged."
+  },
+  {
+    "id": 594,
+    "question": "What's a computer's favorite sport?",
+    "answer": "Disk throwing."
+  },
+  {
+    "id": 595,
+    "question": "Why was the webcam shy?",
+    "answer": "Too many viewers."
+  },
+  {
+    "id": 596,
+    "question": "What do you call a musical keyboard?",
+    "answer": "A type-o."
+  },
+  {
+    "id": 597,
+    "question": "Why don't monitors lie?",
+    "answer": "They display the truth."
+  },
+  {
+    "id": 598,
+    "question": "What's a phone's favorite game?",
+    "answer": "Cell phone tag."
+  },
+  {
+    "id": 599,
+    "question": "Why was the router confused?",
+    "answer": "Too many connections."
+  },
+  {
+    "id": 600,
+    "question": "What do you call a tech genius?",
+    "answer": "A mega-byte."
+  },
+  {
+    "id": 601,
+    "question": "Why don't headphones tangle?",
+    "answer": "They stay connected."
+  },
+  {
+    "id": 602,
+    "question": "What's a computer's favorite food?",
+    "answer": "Spam (but it doesn't like it)."
+  },
+  {
+    "id": 603,
+    "question": "Why was the mouse pad helpful?",
+    "answer": "It supported everyone."
+  },
+  {
+    "id": 604,
+    "question": "What do you call a fast computer?",
+    "answer": "Quick-sand."
+  },
+  {
+    "id": 605,
+    "question": "Why don't speakers stay quiet?",
+    "answer": "They're loud and proud."
+  },
+  {
+    "id": 606,
+    "question": "What's a gamer's favorite season?",
+    "answer": "Game season."
+  },
+  {
+    "id": 607,
+    "question": "Why was the selfie sad?",
+    "answer": "It got no likes."
+  },
+  {
+    "id": 608,
+    "question": "What do you call a smart watch?",
+    "answer": "Time-ly."
+  },
+  {
+    "id": 609,
+    "question": "Why don't chargers give up?",
+    "answer": "They stay plugged in."
+  },
+  {
+    "id": 610,
+    "question": "What's a computer's favorite car?",
+    "answer": "A hard drive."
+  },
+  {
+    "id": 611,
+    "question": "Why was the app happy?",
+    "answer": "Great updates."
+  },
+  {
+    "id": 612,
+    "question": "What do you call a musical laptop?",
+    "answer": "Note-book."
+  },
+  {
+    "id": 613,
+    "question": "Why don't passwords forget?",
+    "answer": "They're memorable."
+  },
+  {
+    "id": 614,
+    "question": "What's a phone's favorite snack?",
+    "answer": "Apple chips."
+  },
+  {
+    "id": 615,
+    "question": "Why was the emoji happy?",
+    "answer": "It was smiling."
+  },
+  {
+    "id": 616,
+    "question": "What do you call a smart plug?",
+    "answer": "Bright outlet."
+  },
+  {
+    "id": 617,
+    "question": "Why don't screens crack jokes?",
+    "answer": "They might break."
+  },
+  {
+    "id": 618,
+    "question": "What's a computer's favorite drink?",
+    "answer": "Java."
+  },
+  {
+    "id": 619,
+    "question": "Why was the download excited?",
+    "answer": "Almost complete."
+  },
+  {
+    "id": 620,
+    "question": "What do you call a tech party?",
+    "answer": "A mega-byte."
+  },
+  {
+    "id": 621,
+    "question": "Why don't servers rest?",
+    "answer": "They're always hosting."
+  },
+  {
+    "id": 622,
+    "question": "What's a keyboard's favorite key?",
+    "answer": "The space bar."
+  },
+  {
+    "id": 623,
+    "question": "Why was the camera focused?",
+    "answer": "On the subject."
+  },
+  {
+    "id": 624,
+    "question": "What do you call a smart speaker?",
+    "answer": "Well-spoken."
+  },
+  {
+    "id": 625,
+    "question": "Why don't clouds lose data?",
+    "answer": "They store everything."
+  },
+  {
+    "id": 626,
+    "question": "What's a computer's best friend?",
+    "answer": "User-friendly."
+  },
+  {
+    "id": 627,
+    "question": "Why don't basketball players get speeding tickets?",
+    "answer": "They always dribble."
+  },
+  {
+    "id": 628,
+    "question": "What do you call a pig playing basketball?",
+    "answer": "A ball hog."
+  },
+  {
+    "id": 629,
+    "question": "Why was the soccer field wet?",
+    "answer": "Players kept dribbling."
+  },
+  {
+    "id": 630,
+    "question": "What do you call a sleeping bull at a game?",
+    "answer": "A bulldozer."
+  },
+  {
+    "id": 631,
+    "question": "Why don't football players get cold?",
+    "answer": "They have fans."
+  },
+  {
+    "id": 632,
+    "question": "What's a boxer's favorite drink?",
+    "answer": "Punch."
+  },
+  {
+    "id": 633,
+    "question": "Why did the golfer bring two pants?",
+    "answer": "In case he got a hole in one."
+  },
+  {
+    "id": 634,
+    "question": "What do you call a fish playing tennis?",
+    "answer": "An athlete."
+  },
+  {
+    "id": 635,
+    "question": "Why don't swimmers sink?",
+    "answer": "They stay afloat."
+  },
+  {
+    "id": 636,
+    "question": "What's a runner's favorite subject?",
+    "answer": "Jog-raphy."
+  },
+  {
+    "id": 637,
+    "question": "Why did the baseball team hire a baker?",
+    "answer": "They needed good batter."
+  },
+  {
+    "id": 638,
+    "question": "What do you call a snowman volleyball player?",
+    "answer": "A spike-cicle."
+  },
+  {
+    "id": 639,
+    "question": "Why don't tennis players marry?",
+    "answer": "Love means nothing."
+  },
+  {
+    "id": 640,
+    "question": "What's a gymnast's favorite music?",
+    "answer": "Hip-hop."
+  },
+  {
+    "id": 641,
+    "question": "Why did the coach go to the bank?",
+    "answer": "To get his quarter back."
+  },
+  {
+    "id": 642,
+    "question": "What do you call a dancing soccer ball?",
+    "answer": "Foot-loose."
+  },
+  {
+    "id": 643,
+    "question": "Why don't bowlers get stressed?",
+    "answer": "They strike a balance."
+  },
+  {
+    "id": 644,
+    "question": "What's a cyclist's favorite music?",
+    "answer": "Spoke-n word."
+  },
+  {
+    "id": 645,
+    "question": "Why did the hockey player study art?",
+    "answer": "To draw penalties."
+  },
+  {
+    "id": 646,
+    "question": "What do you call a fish playing hockey?",
+    "answer": "A goal-fish."
+  },
+  {
+    "id": 647,
+    "question": "Why don't baseball players eat at home plate?",
+    "answer": "It's too crowded."
+  },
+  {
+    "id": 648,
+    "question": "What's a swimmer's favorite stroke?",
+    "answer": "Free-style."
+  },
+  {
+    "id": 649,
+    "question": "Why did the runner stay home?",
+    "answer": "To jog his memory."
+  },
+  {
+    "id": 650,
+    "question": "What do you call a jumping bean?",
+    "answer": "An athlete."
+  },
+  {
+    "id": 651,
+    "question": "Why don't skiers get cold?",
+    "answer": "They're always going downhill."
+  },
+  {
+    "id": 652,
+    "question": "What's a surfer's favorite music?",
+    "answer": "Wave music."
+  },
+  {
+    "id": 653,
+    "question": "Why did the athlete go to art school?",
+    "answer": "To draw plays."
+  },
+  {
+    "id": 654,
+    "question": "What do you call a sporty vegetable?",
+    "answer": "A runner bean."
+  },
+  {
+    "id": 655,
+    "question": "Why don't coaches ever quit?",
+    "answer": "They're in it to win it."
+  },
+  {
+    "id": 656,
+    "question": "What's a baseball's favorite type of story?",
+    "answer": "A pitch."
+  },
+  {
+    "id": 657,
+    "question": "Why did the referee get glasses?",
+    "answer": "To make better calls."
+  },
+  {
+    "id": 658,
+    "question": "What do you call a musical athlete?",
+    "answer": "In-tune shape."
+  },
+  {
+    "id": 659,
+    "question": "Why don't cheerleaders get down?",
+    "answer": "They stay upbeat."
+  },
+  {
+    "id": 660,
+    "question": "What's a football's favorite season?",
+    "answer": "Fall."
+  },
+  {
+    "id": 661,
+    "question": "Why did the score board light up?",
+    "answer": "Great points."
+  },
+  {
+    "id": 662,
+    "question": "What do you call a smart play?",
+    "answer": "Strategy."
+  },
+  {
+    "id": 663,
+    "question": "Why don't trophies rust?",
+    "answer": "They stay polished."
+  },
+  {
+    "id": 664,
+    "question": "What's an athlete's favorite subject?",
+    "answer": "Gym-nastics."
+  },
+  {
+    "id": 665,
+    "question": "Why did the team celebrate?",
+    "answer": "They won!"
+  },
+  {
+    "id": 666,
+    "question": "What do you call a racing snail?",
+    "answer": "Fast-paced."
+  },
+  {
+    "id": 667,
+    "question": "Why don't medals tarnish?",
+    "answer": "They're winners."
+  },
+  {
+    "id": 668,
+    "question": "What's a coach's favorite tool?",
+    "answer": "A play-book."
+  },
+  {
+    "id": 669,
+    "question": "Why did the crowd cheer?",
+    "answer": "Amazing play."
+  },
+  {
+    "id": 670,
+    "question": "What do you call a speedy turtle?",
+    "answer": "Surprisingly quick."
+  },
+  {
+    "id": 671,
+    "question": "Why don't athletes get bored?",
+    "answer": "Too much action."
+  },
+  {
+    "id": 672,
+    "question": "What's a team's best quality?",
+    "answer": "Unity."
+  },
+  {
+    "id": 673,
+    "question": "Why did the fans stay?",
+    "answer": "Exciting game."
+  },
+  {
+    "id": 674,
+    "question": "What do you call a victorious feeling?",
+    "answer": "Sweet success."
+  },
+  {
+    "id": 675,
+    "question": "Why don't champions quit?",
+    "answer": "They persevere."
+  },
+  {
+    "id": 676,
+    "question": "What's the best part of sports?",
+    "answer": "The thrill."
+  },
+  {
+    "id": 677,
+    "question": "What do you call dangerous precipitation?",
+    "answer": "A rain of terror."
+  },
+  {
+    "id": 678,
+    "question": "Why don't clouds get tired?",
+    "answer": "They're always floating."
+  },
+  {
+    "id": 679,
+    "question": "What's a tornado's favorite game?",
+    "answer": "Twister."
+  },
+  {
+    "id": 680,
+    "question": "Why was the sun bright?",
+    "answer": "It's a star."
+  },
+  {
+    "id": 681,
+    "question": "What do you call a grumpy raindrop?",
+    "answer": "A drizzle."
+  },
+  {
+    "id": 682,
+    "question": "Why don't hurricanes get dizzy?",
+    "answer": "They're used to spinning."
+  },
+  {
+    "id": 683,
+    "question": "What's snow's favorite music?",
+    "answer": "Ice Ice Baby."
+  },
+  {
+    "id": 684,
+    "question": "Why was lightning popular?",
+    "answer": "Very striking."
+  },
+  {
+    "id": 685,
+    "question": "What do you call a wet bear?",
+    "answer": "A drizzly bear."
+  },
+  {
+    "id": 686,
+    "question": "Why don't rainbows get lost?",
+    "answer": "They follow the treasure."
+  },
+  {
+    "id": 687,
+    "question": "What's a cloud's music?",
+    "answer": "Thunder."
+  },
+  {
+    "id": 688,
+    "question": "Why was the thermometer upset?",
+    "answer": "Having a meltdown."
+  },
+  {
+    "id": 689,
+    "question": "What do you call a snowman with abs?",
+    "answer": "Abdominal snowman."
+  },
+  {
+    "id": 690,
+    "question": "Why don't forecasters get jokes?",
+    "answer": "They miss the punchline."
+  },
+  {
+    "id": 691,
+    "question": "What's wind's favorite sport?",
+    "answer": "Kite flying."
+  },
+  {
+    "id": 692,
+    "question": "Why was fog mysterious?",
+    "answer": "Clouding the truth."
+  },
+  {
+    "id": 693,
+    "question": "What do you call a happy drop?",
+    "answer": "A puddle of joy."
+  },
+  {
+    "id": 694,
+    "question": "Why don't icicles lie?",
+    "answer": "They're cool with truth."
+  },
+  {
+    "id": 695,
+    "question": "What's a snowflake's dance?",
+    "answer": "The flurry."
+  },
+  {
+    "id": 696,
+    "question": "Why was weather confident?",
+    "answer": "High pressure."
+  },
+  {
+    "id": 697,
+    "question": "What do you call a sunny personality?",
+    "answer": "Bright."
+  },
+  {
+    "id": 698,
+    "question": "Why don't storms apologize?",
+    "answer": "They blow over."
+  },
+  {
+    "id": 699,
+    "question": "What's a raindrop's job?",
+    "answer": "To fall gracefully."
+  },
+  {
+    "id": 700,
+    "question": "Why was thunder loud?",
+    "answer": "Making noise."
+  },
+  {
+    "id": 701,
+    "question": "What do you call gentle rain?",
+    "answer": "A sprinkle."
+  },
+  {
+    "id": 702,
+    "question": "Why don't clouds worry?",
+    "answer": "They drift along."
+  },
+  {
+    "id": 703,
+    "question": "What's the best weather?",
+    "answer": "Perfect conditions."
+  },
+  {
+    "id": 704,
+    "question": "Why was the rainbow happy?",
+    "answer": "Full of color."
+  },
+  {
+    "id": 705,
+    "question": "What do you call windy day?",
+    "answer": "Breezy."
+  },
+  {
+    "id": 706,
+    "question": "Why don't trees fall?",
+    "answer": "Strong roots."
+  },
+  {
+    "id": 707,
+    "question": "What's a flower's scent?",
+    "answer": "Fragrant."
+  },
+  {
+    "id": 708,
+    "question": "Why was the garden growing?",
+    "answer": "Good soil."
+  },
+  {
+    "id": 709,
+    "question": "What do you call fresh air?",
+    "answer": "Refreshing."
+  },
+  {
+    "id": 710,
+    "question": "Why don't mountains move?",
+    "answer": "They stand firm."
+  },
+  {
+    "id": 711,
+    "question": "What's water's path?",
+    "answer": "Flowing."
+  },
+  {
+    "id": 712,
+    "question": "Why was the beach peaceful?",
+    "answer": "Calm waves."
+  },
+  {
+    "id": 713,
+    "question": "What do you call shifting sand?",
+    "answer": "Mobile."
+  },
+  {
+    "id": 714,
+    "question": "Why don't shells leave?",
+    "answer": "They love the shore."
+  },
+  {
+    "id": 715,
+    "question": "What's nature's beauty?",
+    "answer": "Breathtaking."
+  },
+  {
+    "id": 716,
+    "question": "Why was the sunset gorgeous?",
+    "answer": "Perfect colors."
+  },
+  {
+    "id": 717,
+    "question": "What has hands but can't clap?",
+    "answer": "A clock."
+  },
+  {
+    "id": 718,
+    "question": "Why did the belt get arrested?",
+    "answer": "For holding up pants."
+  },
+  {
+    "id": 719,
+    "question": "What's a pirate's favorite letter?",
+    "answer": "Arrr."
+  },
+  {
+    "id": 720,
+    "question": "Why did the cookie go to the doctor?",
+    "answer": "Feeling crummy."
+  },
+  {
+    "id": 721,
+    "question": "What do you call a boomerang that won't return?",
+    "answer": "A stick."
+  },
+  {
+    "id": 722,
+    "question": "Why don't secrets ever last?",
+    "answer": "They get told."
+  },
+  {
+    "id": 723,
+    "question": "What has a neck but no head?",
+    "answer": "A bottle."
+  },
+  {
+    "id": 724,
+    "question": "Why was the calendar worried?",
+    "answer": "Its days were numbered."
+  },
+  {
+    "id": 725,
+    "question": "What has keys but no locks?",
+    "answer": "A piano."
+  },
+  {
+    "id": 726,
+    "question": "Why don't jokes get old?",
+    "answer": "They stay funny."
+  },
+  {
+    "id": 727,
+    "question": "What's brown and sticky?",
+    "answer": "A stick."
+  },
+  {
+    "id": 728,
+    "question": "Why was the picture framed?",
+    "answer": "It was guilty."
+  },
+  {
+    "id": 729,
+    "question": "What has a bed but never sleeps?",
+    "answer": "A river."
+  },
+  {
+    "id": 730,
+    "question": "Why don't riddles give up?",
+    "answer": "They puzzle through."
+  },
+  {
+    "id": 731,
+    "question": "What has teeth but can't bite?",
+    "answer": "A comb."
+  },
+  {
+    "id": 732,
+    "question": "Why was the broom tired?",
+    "answer": "It swept all day."
+  },
+  {
+    "id": 733,
+    "question": "What has legs but can't walk?",
+    "answer": "A table."
+  },
+  {
+    "id": 734,
+    "question": "Why don't curtains tell secrets?",
+    "answer": "They're drawn."
+  },
+  {
+    "id": 735,
+    "question": "What has ears but can't hear?",
+    "answer": "Corn."
+  },
+  {
+    "id": 736,
+    "question": "Why was the lamp bright?",
+    "answer": "Had a good idea."
+  },
+  {
+    "id": 737,
+    "question": "What has a face but no eyes?",
+    "answer": "A clock."
+  },
+  {
+    "id": 738,
+    "question": "Why don't doors complain?",
+    "answer": "They're well-hung."
+  },
+  {
+    "id": 739,
+    "question": "What has wings but can't fly?",
+    "answer": "A building."
+  },
+  {
+    "id": 740,
+    "question": "Why was the shoe happy?",
+    "answer": "It was tied up."
+  },
+  {
+    "id": 741,
+    "question": "What has a tongue but can't talk?",
+    "answer": "A shoe."
+  },
+  {
+    "id": 742,
+    "question": "Why don't stairs give up?",
+    "answer": "They step up."
+  },
+  {
+    "id": 743,
+    "question": "What has a head and tail but no body?",
+    "answer": "A coin."
+  },
+  {
+    "id": 744,
+    "question": "Why was the hat on top?",
+    "answer": "That's where it goes."
+  },
+  {
+    "id": 745,
+    "question": "What has four wheels and flies?",
+    "answer": "A garbage truck."
+  },
+  {
+    "id": 746,
+    "question": "Why don't bridges complain?",
+    "answer": "They get over it."
+  },
+  {
+    "id": 747,
+    "question": "What has hands and a face?",
+    "answer": "A clock."
+  },
+  {
+    "id": 748,
+    "question": "Why was the candle bright?",
+    "answer": "It was lit."
+  },
+  {
+    "id": 749,
+    "question": "What has a bottom at the top?",
+    "answer": "Your legs."
+  },
+  {
+    "id": 750,
+    "question": "Why don't pillows argue?",
+    "answer": "They're soft."
+  },
+  {
+    "id": 751,
+    "question": "What has cities but no houses?",
+    "answer": "A map."
+  },
+  {
+    "id": 752,
+    "question": "Why was the blanket comfortable?",
+    "answer": "It covered everything."
+  },
+  {
+    "id": 753,
+    "question": "What has a ring but no finger?",
+    "answer": "A telephone."
+  },
+  {
+    "id": 754,
+    "question": "Why don't windows lie?",
+    "answer": "They're transparent."
+  },
+  {
+    "id": 755,
+    "question": "What has branches but no leaves?",
+    "answer": "A bank."
+  },
+  {
+    "id": 756,
+    "question": "Why was the mirror honest?",
+    "answer": "It reflected truth."
+  },
+  {
+    "id": 757,
+    "question": "What has a spine but no bones?",
+    "answer": "A book."
+  },
+  {
+    "id": 758,
+    "question": "Why don't carpets move?",
+    "answer": "They're laid down."
+  },
+  {
+    "id": 759,
+    "question": "What has pages but isn't a book?",
+    "answer": "A calendar."
+  },
+  {
+    "id": 760,
+    "question": "Why was the door open?",
+    "answer": "It welcomed everyone."
+  },
+  {
+    "id": 761,
+    "question": "What has numbers but isn't a phone?",
+    "answer": "A clock."
+  },
+  {
+    "id": 762,
+    "question": "Why don't walls talk?",
+    "answer": "They keep quiet."
+  },
+  {
+    "id": 763,
+    "question": "What has a cap but no head?",
+    "answer": "A bottle."
+  },
+  {
+    "id": 764,
+    "question": "Why was the floor supportive?",
+    "answer": "It held everything up."
+  },
+  {
+    "id": 765,
+    "question": "What has water but isn't wet?",
+    "answer": "A coconut."
+  },
+  {
+    "id": 766,
+    "question": "Why don't ceilings fall?",
+    "answer": "They're well supported."
+  },
+  {
+    "id": 767,
+    "question": "What has teeth but doesn't bite?",
+    "answer": "A zipper."
+  },
+  {
+    "id": 768,
+    "question": "Why don't elevators tell jokes?",
+    "answer": "They work on many levels."
+  },
+  {
+    "id": 769,
+    "question": "What has one eye but can't see?",
+    "answer": "A needle."
+  },
+  {
+    "id": 770,
+    "question": "Why was the stadium cold?",
+    "answer": "Too many fans."
+  },
+  {
+    "id": 771,
+    "question": "What can travel around the world while staying in a corner?",
+    "answer": "A stamp."
+  },
+  {
+    "id": 772,
+    "question": "Why don't mountains ever get cold?",
+    "answer": "They wear snow caps."
+  },
+  {
+    "id": 773,
+    "question": "What goes up and down but doesn't move?",
+    "answer": "Stairs."
+  },
+  {
+    "id": 774,
+    "question": "Why was the musician arrested?",
+    "answer": "He got in treble."
+  },
+  {
+    "id": 775,
+    "question": "What can you catch but not throw?",
+    "answer": "A cold."
+  },
+  {
+    "id": 776,
+    "question": "Why don't ghosts lie?",
+    "answer": "You can see through them."
+  },
+  {
+    "id": 777,
+    "question": "What gets wetter the more it dries?",
+    "answer": "A towel."
+  },
+  {
+    "id": 778,
+    "question": "Why was the baby ant confused?",
+    "answer": "All his uncles were ants."
+  },
+  {
+    "id": 779,
+    "question": "What is full of holes but holds water?",
+    "answer": "A sponge."
+  },
+  {
+    "id": 780,
+    "question": "Why don't secrets make good friends?",
+    "answer": "They get out."
+  },
+  {
+    "id": 781,
+    "question": "What has words but never speaks?",
+    "answer": "A book."
+  },
+  {
+    "id": 782,
+    "question": "Why was the moon broke?",
+    "answer": "It was down to its last quarter."
+  },
+  {
+    "id": 783,
+    "question": "What can fill a room but takes no space?",
+    "answer": "Light."
+  },
+  {
+    "id": 784,
+    "question": "Why don't bubbles last?",
+    "answer": "They pop."
+  },
+  {
+    "id": 785,
+    "question": "What is always in front but can't be seen?",
+    "answer": "The future."
+  },
+  {
+    "id": 786,
+    "question": "Why was the belt a hero?",
+    "answer": "It held everything together."
+  },
+  {
+    "id": 787,
+    "question": "What has many keys but can't open doors?",
+    "answer": "A keyboard."
+  },
+  {
+    "id": 788,
+    "question": "Why don't candles ever get tired?",
+    "answer": "They burn with energy."
+  },
+  {
+    "id": 789,
+    "question": "What runs but never walks?",
+    "answer": "Water."
+  },
+  {
+    "id": 790,
+    "question": "Why was the fence proud?",
+    "answer": "It was outstanding in its field."
+  },
+  {
+    "id": 791,
+    "question": "What has a heart that doesn't beat?",
+    "answer": "An artichoke."
+  },
+  {
+    "id": 792,
+    "question": "Why don't circles ever get into arguments?",
+    "answer": "They have no point."
+  },
+  {
+    "id": 793,
+    "question": "What can you break without touching it?",
+    "answer": "A promise."
+  },
+  {
+    "id": 794,
+    "question": "Why was the lamp hired?",
+    "answer": "It was very bright."
+  },
+  {
+    "id": 795,
+    "question": "What gets sharper the more you use it?",
+    "answer": "Your brain."
+  },
+  {
+    "id": 796,
+    "question": "Why don't clouds ever get lost?",
+    "answer": "They drift with purpose."
+  },
+  {
+    "id": 797,
+    "question": "What is always coming but never arrives?",
+    "answer": "Tomorrow."
+  },
+  {
+    "id": 798,
+    "question": "Why was the magnet attractive?",
+    "answer": "It had pull."
+  },
+  {
+    "id": 799,
+    "question": "What has a foot on each end and one in the middle?",
+    "answer": "A yardstick."
+  },
+  {
+    "id": 800,
+    "question": "Why don't gardens ever complain?",
+    "answer": "They grow with it."
+  },
+  {
+    "id": 801,
+    "question": "What goes through towns without moving?",
+    "answer": "A road."
+  },
+  {
+    "id": 802,
+    "question": "Why was the light bulb smart?",
+    "answer": "It had bright ideas."
+  },
+  {
+    "id": 803,
+    "question": "What can run but never get tired?",
+    "answer": "A refrigerator."
+  },
+  {
+    "id": 804,
+    "question": "Why don't paths ever give up?",
+    "answer": "They lead somewhere."
+  },
+  {
+    "id": 805,
+    "question": "What gets bigger the more you take away?",
+    "answer": "A hole."
+  },
+  {
+    "id": 806,
+    "question": "Why was the envelope sealed?",
+    "answer": "It had a letter inside."
+  },
+  {
+    "id": 807,
+    "question": "What has fingers but isn't alive?",
+    "answer": "A glove."
+  },
+  {
+    "id": 808,
+    "question": "Why don't wheels complain?",
+    "answer": "They keep rolling."
+  },
+  {
+    "id": 809,
+    "question": "What flies without wings?",
+    "answer": "Time."
+  },
+  {
+    "id": 810,
+    "question": "Why was the rope trusted?",
+    "answer": "It was tied to its word."
+  },
+  {
+    "id": 811,
+    "question": "What has a thumb and fingers but isn't alive?",
+    "answer": "A glove."
+  },
+  {
+    "id": 812,
+    "question": "Why don't shadows ever lead?",
+    "answer": "They follow."
+  },
+  {
+    "id": 813,
+    "question": "What has no beginning, end, or middle?",
+    "answer": "A doughnut."
+  },
+  {
+    "id": 814,
+    "question": "Why was the penny wise?",
+    "answer": "It made cents."
+  },
+  {
+    "id": 815,
+    "question": "What is yours but used more by others?",
+    "answer": "Your name."
+  },
+  {
+    "id": 816,
+    "question": "Why don't echoes ever start conversations?",
+    "answer": "They repeat."
+  },
+  {
+    "id": 817,
+    "question": "What has a forest with no trees?",
+    "answer": "A chess board."
+  },
+  {
+    "id": 818,
+    "question": "Why was the stamp stuck?",
+    "answer": "It was attached."
+  },
+  {
+    "id": 819,
+    "question": "What can be cracked, made, told, and played?",
+    "answer": "A joke."
+  },
+  {
+    "id": 820,
+    "question": "Why don't bridges ever sink?",
+    "answer": "They're built to last."
+  },
+  {
+    "id": 821,
+    "question": "What has four fingers and a thumb but isn't alive?",
+    "answer": "A glove."
+  },
+  {
+    "id": 822,
+    "question": "Why was the garden happy?",
+    "answer": "It was blooming."
+  },
+  {
+    "id": 823,
+    "question": "What has a bank but no money?",
+    "answer": "A river."
+  },
+  {
+    "id": 824,
+    "question": "Why don't feathers ever sink?",
+    "answer": "They're light."
+  },
+  {
+    "id": 825,
+    "question": "What has a tail and head but no body?",
+    "answer": "A coin."
+  },
+  {
+    "id": 826,
+    "question": "Why was the artist poor?",
+    "answer": "He could only draw flies."
+  },
+  {
+    "id": 827,
+    "question": "What has many teeth but can't chew?",
+    "answer": "A saw."
+  },
+  {
+    "id": 828,
+    "question": "Why don't balloons ever keep secrets?",
+    "answer": "They might burst."
+  },
+  {
+    "id": 829,
+    "question": "What comes once in a minute, twice in a moment, never in a thousand years?",
+    "answer": "The letter M."
+  },
+  {
+    "id": 830,
+    "question": "Why was the needle sharp?",
+    "answer": "It had a point."
+  },
+  {
+    "id": 831,
+    "question": "What has lakes but no water?",
+    "answer": "A map."
+  },
+  {
+    "id": 832,
+    "question": "Why don't whistles ever whisper?",
+    "answer": "They're loud by nature."
+  },
+  {
+    "id": 833,
+    "question": "What is easy to get into but hard to get out of?",
+    "answer": "Trouble."
+  },
+  {
+    "id": 834,
+    "question": "Why was the box square?",
+    "answer": "That's its shape."
+  },
+  {
+    "id": 835,
+    "question": "What is black when clean and white when dirty?",
+    "answer": "A chalkboard."
+  },
+  {
+    "id": 836,
+    "question": "Why don't clouds ever rush?",
+    "answer": "They take their time."
+  },
+  {
+    "id": 837,
+    "question": "What goes all around a field but never moves?",
+    "answer": "A fence."
+  },
+  {
+    "id": 838,
+    "question": "Why was the bucket useful?",
+    "answer": "It held everything."
+  },
+  {
+    "id": 839,
+    "question": "What can you hold without touching?",
+    "answer": "Your breath."
+  },
+  {
+    "id": 840,
+    "question": "Why don't bells ever text?",
+    "answer": "They ring."
+  },
+  {
+    "id": 841,
+    "question": "What has cities, mountains, and rivers but no people?",
+    "answer": "A map."
+  },
+  {
+    "id": 842,
+    "question": "Why was the chalk dusty?",
+    "answer": "It wrote on the board."
+  },
+  {
+    "id": 843,
+    "question": "What can you keep after giving it to someone?",
+    "answer": "Your word."
+  },
+  {
+    "id": 844,
+    "question": "Why don't paths ever get straight answers?",
+    "answer": "They wind around."
+  },
+  {
+    "id": 845,
+    "question": "What belongs to you but is used by others?",
+    "answer": "Your name."
+  },
+  {
+    "id": 846,
+    "question": "Why was the marker permanent?",
+    "answer": "It wouldn't erase."
+  },
+  {
+    "id": 847,
+    "question": "What can be opened but never closed?",
+    "answer": "An egg."
+  },
+  {
+    "id": 848,
+    "question": "Why don't horns ever stay quiet?",
+    "answer": "They honk."
+  },
+  {
+    "id": 849,
+    "question": "What has a bottom at its top?",
+    "answer": "A leg."
+  },
+  {
+    "id": 850,
+    "question": "Why was the sign helpful?",
+    "answer": "It pointed the way."
+  },
+  {
+    "id": 851,
+    "question": "What has roads but no cars?",
+    "answer": "A map."
+  },
+  {
+    "id": 852,
+    "question": "Why don't frames ever move?",
+    "answer": "They're hung up."
+  },
+  {
+    "id": 853,
+    "question": "What can you serve but never eat?",
+    "answer": "A tennis ball."
+  },
+  {
+    "id": 854,
+    "question": "Why was the handle useful?",
+    "answer": "You could grab it."
+  },
+  {
+    "id": 855,
+    "question": "What has no life but can die?",
+    "answer": "A battery."
+  },
+  {
+    "id": 856,
+    "question": "Why don't tracks ever get lost?",
+    "answer": "They follow rails."
+  },
+  {
+    "id": 857,
+    "question": "What starts with E, ends with E, but only has one letter?",
+    "answer": "An envelope."
+  },
+  {
+    "id": 858,
+    "question": "Why was the spring bouncy?",
+    "answer": "It coiled up energy."
+  },
+  {
+    "id": 859,
+    "question": "What has hands but can't feel?",
+    "answer": "A clock."
+  },
+  {
+    "id": 860,
+    "question": "Why don't roads ever give up?",
+    "answer": "They go the distance."
+  },
+  {
+    "id": 861,
+    "question": "What can clap without hands?",
+    "answer": "Thunder."
+  },
+  {
+    "id": 862,
+    "question": "Why was the glove helpful?",
+    "answer": "It lent a hand."
+  },
+  {
+    "id": 863,
+    "question": "What is full of keys but can't open a lock?",
+    "answer": "A piano."
+  },
+  {
+    "id": 864,
+    "question": "Why don't branches ever complain?",
+    "answer": "They stick together."
+  },
+  {
+    "id": 865,
+    "question": "What has stripes but isn't a tiger?",
+    "answer": "A zebra crossing."
+  },
+  {
+    "id": 866,
+    "question": "Why was the hanger supportive?",
+    "answer": "It held things up."
+  },
+  {
+    "id": 867,
+    "question": "What grows down as it grows up?",
+    "answer": "A goose."
+  },
+  {
+    "id": 868,
+    "question": "Why don't nails ever back down?",
+    "answer": "They're driven."
+  },
+  {
+    "id": 869,
+    "question": "What has an end but no beginning?",
+    "answer": "Death (but let's say: The alphabet)."
+  },
+  {
+    "id": 870,
+    "question": "Why was the string attached?",
+    "answer": "It was tied up."
+  },
+  {
+    "id": 871,
+    "question": "What is so delicate that saying its name breaks it?",
+    "answer": "Silence."
+  },
+  {
+    "id": 872,
+    "question": "Why don't locks ever panic?",
+    "answer": "They stay secure."
+  },
+  {
+    "id": 873,
+    "question": "What has many rings but no fingers?",
+    "answer": "A tree."
+  },
+  {
+    "id": 874,
+    "question": "Why was the spring season?",
+    "answer": "Perfect timing."
+  },
+  {
+    "id": 875,
+    "question": "What starts with P, ends with E, and has thousands of letters?",
+    "answer": "Post office."
+  },
+  {
+    "id": 876,
+    "question": "Why don't hinges ever complain?",
+    "answer": "They're flexible."
+  },
+  {
+    "id": 877,
+    "question": "What can honk without a horn?",
+    "answer": "A goose."
+  },
+  {
+    "id": 878,
+    "question": "Why was the slide fun?",
+    "answer": "It went down easy."
+  },
+  {
+    "id": 879,
+    "question": "What has bark but no bite?",
+    "answer": "A tree."
+  },
+  {
+    "id": 880,
+    "question": "Why don't rocks ever hurry?",
+    "answer": "They're steady."
+  },
+  {
+    "id": 881,
+    "question": "What has waves but no water?",
+    "answer": "Your hair."
+  },
+  {
+    "id": 882,
+    "question": "Why was the wheel round?",
+    "answer": "Perfect shape for rolling."
+  },
+  {
+    "id": 883,
+    "question": "What can you hear but not see or touch?",
+    "answer": "Sound."
+  },
+  {
+    "id": 884,
+    "question": "Why don't springs ever give up?",
+    "answer": "They bounce back."
+  },
+  {
+    "id": 885,
+    "question": "What has one head, one foot, four legs?",
+    "answer": "A bed."
+  },
+  {
+    "id": 886,
+    "question": "Why was the gate friendly?",
+    "answer": "It opened up."
+  },
+  {
+    "id": 887,
+    "question": "What can fly without wings?",
+    "answer": "Time."
+  },
+  {
+    "id": 888,
+    "question": "Why don't pockets ever tell?",
+    "answer": "They keep things in."
+  },
+  {
+    "id": 889,
+    "question": "What has teeth but no mouth?",
+    "answer": "A gear."
+  },
+  {
+    "id": 890,
+    "question": "Why was the swing fun?",
+    "answer": "It went back and forth."
+  },
+  {
+    "id": 891,
+    "question": "What is made of water but dies in water?",
+    "answer": "An ice cube."
+  },
+  {
+    "id": 892,
+    "question": "Why don't logs ever move?",
+    "answer": "They're still."
+  },
+  {
+    "id": 893,
+    "question": "What is lighter than a feather but impossible to hold for long?",
+    "answer": "Your breath."
+  },
+  {
+    "id": 894,
+    "question": "Why was the shelf helpful?",
+    "answer": "It held everything."
+  },
+  {
+    "id": 895,
+    "question": "What never asks questions but receives many answers?",
+    "answer": "A doorbell."
+  },
+  {
+    "id": 896,
+    "question": "Why don't ropes ever break promises?",
+    "answer": "They're trustworthy."
+  },
+  {
+    "id": 897,
+    "question": "What has holes but holds things?",
+    "answer": "A net."
+  },
+  {
+    "id": 898,
+    "question": "Why was the handle grabbed?",
+    "answer": "It was handy."
+  },
+  {
+    "id": 899,
+    "question": "What gets easier to pick up the heavier it gets?",
+    "answer": "A habit."
+  },
+  {
+    "id": 900,
+    "question": "Why don't shortcuts ever take long?",
+    "answer": "They save time."
+  }
+]

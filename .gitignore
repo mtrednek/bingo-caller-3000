@@ -1,0 +1,104 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage/
+
+# Next.js
+.next/
+/.next/
+/out/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+.env
+.env.development
+.env.test
+.env.production
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.db-journal
+/prisma/dev.db*
+/prisma/test.db*
+/prisma/migrations/
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# Backup files
+*.backup
+/backups/
+
+# PM2
+.pm2/
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Output
+dist/
+
+# Claude Code IDE settings
+.claude/
+
+# Cookie files
+cookies.txt
+
+# Script outputs
+/scripts/output/
+/scripts/exports/

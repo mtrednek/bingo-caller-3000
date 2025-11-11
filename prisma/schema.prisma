@@ -1,0 +1,134 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  username      String    @unique
+  password      String
+  role          String    @default("caller") // admin, caller, viewer
+  createdAt     DateTime  @default(now())
+  sessions      Session[]
+  
+  // NextAuth.js fields
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions_auth SessionAuth[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model SessionAuth {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Session {
+  id                    String    @id @default(cuid())
+  name                  String
+  players               Int       @default(16)
+  duration              Int       // minutes
+  singlePackets         Int       @default(1)  // Number of single packets sold
+  doublePackets         Int       @default(16)   // Number of double packets sold
+  singlePacketPrice     Float     @default(10.00)  // Price per single packet
+  doublePacketPrice     Float     @default(16.00)  // Price per double packet
+  operatingCost         Float     @default(1.00)   // Operating cost amount
+  operatingCostType     String    @default("player") // "player" or "packet"
+  showFactoids          Boolean   @default(true) // Show factoids on display screen
+  startTime             DateTime?
+  endTime               DateTime?
+  status                String    @default("scheduled") // scheduled, active, completed
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id])
+  games                 Game[]
+  jokeOrder             Json      @default("[]")  // Randomized array of joke IDs for this session
+  currentJokeIndex      Int       @default(0)     // Current position in the jokeOrder array
+  createdAt             DateTime  @default(now())
+}
+
+model Game {
+  id            String    @id @default(cuid())
+  sessionId     String
+  session       Session   @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  orderIndex    Int
+  patternType   String
+  patternName   String
+  prizeValue    Float
+  patternColor  String    @default("#60a5fa") // Hex color for pattern cells
+  status        String    @default("pending") // pending, active, completed
+  startTime     DateTime?
+  endTime       DateTime?
+  calledNumbers Json      @default("[]")
+  excludedRanges Json     @default("[]") // Array of BINGO letters excluded for this game
+  winnerName    String?
+  winnerCard    String?
+  createdAt     DateTime  @default(now())
+}
+
+model Pattern {
+  id            String    @id @default(cuid())
+  code          String    @unique
+  name          String
+  altNames      Json      @default("[]")
+  category      String
+  difficulty    Int
+  requiredCells Json
+  description   String
+  isActive      Boolean   @default(true)
+  canRotate     Boolean   @default(false)
+  canMirror     Boolean   @default(false)
+  animationDelay Int?     // Animation delay in milliseconds for rotatable/mirrorable patterns
+  excludedRanges Json     @default("[]") // Array of BINGO letters to exclude: ["B", "I", "N", "G", "O"]
+}
+
+model SystemSettings {
+  id            String    @id @default(cuid())
+  key           String    @unique
+  value         Json
+  updatedAt     DateTime  @updatedAt
+}
+
+model DisplayConfig {
+  id                    String   @id @default(cuid())
+  currentJokeIndex      Int      @default(0)
+  gamesDisplaySeconds   Int      @default(10)
+  jokeQuestionSeconds   Int      @default(5)
+  jokeAnswerSeconds     Int      @default(5)
+  displayMargin         Int      @default(0)  // Outer margin in pixels for display screens
+  updatedAt             DateTime @updatedAt
+  createdAt             DateTime @default(now())
+}
