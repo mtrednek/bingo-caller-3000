@@ -78,7 +78,7 @@ function initializeDatabase() {
     : path.join(__dirname, 'scripts', 'init-database.js');
 
   try {
-    execSync(`node "${initScript}"`, {
+    execSync(`"${process.execPath}" "${initScript}"`, {
       stdio: 'inherit',
       env: { ...process.env }
     });
@@ -99,7 +99,7 @@ function startSocketServer() {
     ? path.join(rootDir, 'dist', 'server', 'index.js')
     : path.join(__dirname, 'dist', 'server', 'index.js');
 
-  socketServer = spawn('node', [socketScript], {
+  socketServer = spawn(process.execPath, [socketScript], {
     env: { ...process.env },
     stdio: 'inherit'
   });
@@ -143,7 +143,7 @@ function startNextServer() {
     console.log('📋 Copied database to standalone build location\n');
   }
 
-  nextServer = spawn('node', [nextServerScript], {
+  nextServer = spawn(process.execPath, [nextServerScript], {
     env: {
       ...process.env,
       PORT: NEXT_PORT,
