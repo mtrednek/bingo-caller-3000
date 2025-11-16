@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
+const { spawn, execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const { exec } = require('child_process');
@@ -19,12 +19,15 @@ const rootDir = isPackaged ? path.join(__dirname, '..') : __dirname;
 // Set environment variables
 process.env.NEXT_PUBLIC_APP_URL = APP_URL;
 process.env.NEXTAUTH_URL = APP_URL;
+process.env.AUTH_TRUST_HOST = 'true';
+process.env.NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET || 'super-secret-key-change-in-production';
 process.env.SOCKET_PORT = SOCKET_PORT;
 process.env.NEXT_PUBLIC_SOCKET_URL = `http://localhost:${SOCKET_PORT}`;
 
 // Database setup
 const dbPath = path.join(rootDir, 'prisma', 'dev.db');
 const dbDir = path.dirname(dbPath);
+const prismaSchemaPath = path.join(rootDir, 'prisma', 'schema.prisma');
 
 // Ensure prisma directory exists
 if (!fs.existsSync(dbDir)) {
@@ -32,13 +35,16 @@ if (!fs.existsSync(dbDir)) {
   console.log('📁 Created database directory');
 }
 
-// Check if database exists
-if (!fs.existsSync(dbPath)) {
-  console.log('📊 Database not found. Creating new database...');
-  console.log('⚠️  Note: You\'ll need to run the seed script to add patterns and users.');
+// Check if database needs initialization
+const needsInit = !fs.existsSync(dbPath);
+if (needsInit) {
+  console.log('📊 Database not found. Will initialize after servers start...');
 }
 
+// Set database URL - use absolute path for SQLite
 process.env.DATABASE_URL = `file:${dbPath}`;
+// Set Prisma schema path for Prisma Client
+process.env.PRISMA_SCHEMA_PATH = prismaSchemaPath;
 
 let nextServer;
 let socketServer;
@@ -61,6 +67,28 @@ function openBrowser(url) {
       }
     });
   }, 2000);
+}
+
+// Function to initialize database
+function initializeDatabase() {
+  console.log('🔧 Initializing database schema...\n');
+
+  const initScript = isPackaged
+    ? path.join(rootDir, 'scripts', 'init-database.js')
+    : path.join(__dirname, 'scripts', 'init-database.js');
+
+  try {
+    execSync(`node "${initScript}"`, {
+      stdio: 'inherit',
+      env: { ...process.env }
+    });
+    console.log('✅ Database initialized successfully\n');
+    return true;
+  } catch (error) {
+    console.error('❌ Failed to initialize database:', error.message);
+    console.error('   The application may not work correctly.\n');
+    return false;
+  }
 }
 
 // Start Socket.IO server
@@ -101,14 +129,30 @@ function startNextServer() {
     process.exit(1);
   }
 
+  // For standalone server, ensure paths are relative to standalone directory
+  const standaloneDir = path.dirname(nextServerScript);
+  const standalonePrismaDir = path.join(standaloneDir, 'prisma');
+  const standaloneDbPath = path.join(standalonePrismaDir, 'dev.db');
+
+  // Copy database to standalone location if it doesn't exist there
+  if (fs.existsSync(dbPath) && !fs.existsSync(standaloneDbPath)) {
+    if (!fs.existsSync(standalonePrismaDir)) {
+      fs.mkdirSync(standalonePrismaDir, { recursive: true });
+    }
+    fs.copyFileSync(dbPath, standaloneDbPath);
+    console.log('📋 Copied database to standalone build location\n');
+  }
+
   nextServer = spawn('node', [nextServerScript], {
     env: {
       ...process.env,
       PORT: NEXT_PORT,
-      HOSTNAME: '0.0.0.0'
+      HOSTNAME: '0.0.0.0',
+      DATABASE_URL: `file:${standaloneDbPath}`,
+      PRISMA_SCHEMA_PATH: path.join(standalonePrismaDir, 'schema.prisma')
     },
     stdio: 'inherit',
-    cwd: path.dirname(nextServerScript)
+    cwd: standaloneDir
   });
 
   nextServer.on('error', (err) => {
@@ -161,24 +205,48 @@ console.log(`  Database:      ${dbPath}`);
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
 
 // Check if Socket.IO server build exists
-const socketDist = path.join(__dirname, 'dist', 'server', 'index.js');
-if (!fs.existsSync(socketDist)) {
-  console.log('⚠️  Socket.IO server build not found. Building...');
-  const buildSocket = spawn('npm', ['run', 'build:socket'], {
-    stdio: 'inherit',
-    shell: true
-  });
+const socketDist = isPackaged
+  ? path.join(rootDir, 'dist', 'server', 'index.js')
+  : path.join(__dirname, 'dist', 'server', 'index.js');
 
-  buildSocket.on('exit', (code) => {
-    if (code === 0) {
-      startSocketServer();
-      startNextServer();
-    } else {
-      console.error('❌ Failed to build Socket.IO server');
-      process.exit(1);
-    }
-  });
+if (!fs.existsSync(socketDist)) {
+  if (isPackaged) {
+    console.error('❌ Socket.IO server build not found in package!');
+    console.error('   This package may be corrupted or incomplete.');
+    console.error('   Please download a fresh copy.');
+    process.exit(1);
+  } else {
+    console.log('⚠️  Socket.IO server build not found. Building...');
+    const buildSocket = spawn('npm', ['run', 'build:socket'], {
+      stdio: 'inherit',
+      shell: true
+    });
+
+    buildSocket.on('exit', (code) => {
+      if (code === 0) {
+        // Initialize database if needed
+        if (needsInit) {
+          if (!initializeDatabase()) {
+            console.error('⚠️  Database initialization had errors, but attempting to start anyway...\n');
+          }
+        }
+
+        startSocketServer();
+        startNextServer();
+      } else {
+        console.error('❌ Failed to build Socket.IO server');
+        process.exit(1);
+      }
+    });
+  }
 } else {
+  // Initialize database if needed
+  if (needsInit) {
+    if (!initializeDatabase()) {
+      console.error('⚠️  Database initialization had errors, but attempting to start anyway...\n');
+    }
+  }
+
   startSocketServer();
   startNextServer();
 }
