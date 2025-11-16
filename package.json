@@ -9,10 +9,17 @@
     "socket:dev": "tsx server/index.ts",
     "build": "next build",
     "build:socket": "tsc server/index.ts --outDir dist --target ES2020 --module commonjs --esModuleInterop --resolveJsonModule",
+    "build:standalone": "npm run build && npm run build:socket",
     "start": "concurrently \"npm run next:start\" \"npm run socket:start\"",
+    "start:launcher": "node launcher.js",
     "next:start": "next start",
     "socket:start": "node dist/server/index.js",
     "lint": "next lint",
+    "package": "node scripts/prepare-package.js",
+    "package:all": "npm run package:win && npm run package:mac && npm run package:linux",
+    "package:win": "caxa --input . --output \"dist-packages/bingo-caller-windows.exe\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/launcher.js\"",
+    "package:mac": "caxa --input . --output \"dist-packages/bingo-caller-macos\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/launcher.js\"",
+    "package:linux": "caxa --input . --output \"dist-packages/bingo-caller-linux\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/launcher.js\"",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
@@ -69,7 +76,8 @@
   "devDependencies": {
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.11",
-    "@types/react-dom": "^19.1.7"
+    "@types/react-dom": "^19.1.7",
+    "caxa": "^3.0.1"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

@@ -1,0 +1,73 @@
+# Development files
+.git
+.github
+.vscode
+.idea
+.DS_Store
+*.log
+
+# Development dependencies and tools
+.next/cache
+.next/trace
+node_modules/.cache
+
+# Documentation
+README.md
+CONTRIBUTING.md
+SECURITY.md
+LICENSE
+
+# Development configs
+.eslintrc.json
+.prettierrc
+.editorconfig
+
+# Test files
+**/*.test.js
+**/*.test.ts
+**/*.spec.js
+**/*.spec.ts
+**/test/**
+**/tests/**
+**/__tests__/**
+
+# Source files (we only need built files)
+app/**/*.tsx
+app/**/*.ts
+components/**/*.tsx
+components/**/*.ts
+lib/**/*.ts
+hooks/**/*.ts
+types/**/*.ts
+server/**/*.ts
+# Keep the compiled server
+!dist/server/**
+
+# Development database (users will create their own)
+# Commented out to include pre-seeded database in package
+# prisma/dev.db
+prisma/dev.db.bak
+prisma/*.backup
+
+# Build artifacts we don't need
+tsconfig.tsbuildinfo
+.next/build-manifest.json
+.next/export-detail.json
+
+# Package output directory
+dist-packages/
+
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# Environment files (users create their own)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Claude Code
+.claude/

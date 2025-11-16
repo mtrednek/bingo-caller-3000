@@ -102,3 +102,6 @@ cookies.txt
 # Script outputs
 /scripts/output/
 /scripts/exports/
+
+# Packaging outputs
+/dist-packages/

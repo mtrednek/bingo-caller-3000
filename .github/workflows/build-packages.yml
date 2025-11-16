@@ -1,0 +1,193 @@
+name: Build Packages
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  build-windows:
+    name: Build Windows Package
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup database
+        run: |
+          npm run db:generate
+          npm run db:push
+          npm run db:seed
+
+      - name: Build standalone application
+        run: npm run build:standalone
+
+      - name: Create Windows package
+        run: npm run package:win
+
+      - name: Verify package
+        run: |
+          if (Test-Path "dist-packages/bingo-caller-windows.exe") {
+            $size = (Get-Item "dist-packages/bingo-caller-windows.exe").Length / 1MB
+            Write-Host "Package created successfully: $([math]::Round($size, 2)) MB"
+          } else {
+            Write-Error "Package not found!"
+            exit 1
+          }
+        shell: pwsh
+
+      - name: Upload Windows package
+        uses: actions/upload-artifact@v4
+        with:
+          name: bingo-caller-windows
+          path: dist-packages/bingo-caller-windows.exe
+          retention-days: 30
+
+  build-macos:
+    name: Build macOS Package
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup database
+        run: |
+          npm run db:generate
+          npm run db:push
+          npm run db:seed
+
+      - name: Build standalone application
+        run: npm run build:standalone
+
+      - name: Create macOS package
+        run: npm run package:mac
+
+      - name: Verify package
+        run: |
+          if [ -f "dist-packages/bingo-caller-macos" ]; then
+            size=$(du -h dist-packages/bingo-caller-macos | cut -f1)
+            echo "Package created successfully: $size"
+          else
+            echo "Package not found!"
+            exit 1
+          fi
+
+      - name: Upload macOS package
+        uses: actions/upload-artifact@v4
+        with:
+          name: bingo-caller-macos
+          path: dist-packages/bingo-caller-macos
+          retention-days: 30
+
+  build-linux:
+    name: Build Linux Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup database
+        run: |
+          npm run db:generate
+          npm run db:push
+          npm run db:seed
+
+      - name: Build standalone application
+        run: npm run build:standalone
+
+      - name: Create Linux package
+        run: npm run package:linux
+
+      - name: Verify package
+        run: |
+          if [ -f "dist-packages/bingo-caller-linux" ]; then
+            size=$(du -h dist-packages/bingo-caller-linux | cut -f1)
+            echo "Package created successfully: $size"
+          else
+            echo "Package not found!"
+            exit 1
+          fi
+
+      - name: Upload Linux package
+        uses: actions/upload-artifact@v4
+        with:
+          name: bingo-caller-linux
+          path: dist-packages/bingo-caller-linux
+          retention-days: 30
+
+  create-release:
+    name: Create Release
+    needs: [build-windows, build-macos, build-linux]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Windows package
+        uses: actions/download-artifact@v4
+        with:
+          name: bingo-caller-windows
+          path: ./packages
+
+      - name: Download macOS package
+        uses: actions/download-artifact@v4
+        with:
+          name: bingo-caller-macos
+          path: ./packages
+
+      - name: Download Linux package
+        uses: actions/download-artifact@v4
+        with:
+          name: bingo-caller-linux
+          path: ./packages
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            packages/bingo-caller-windows.exe
+            packages/bingo-caller-macos
+            packages/bingo-caller-linux
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
