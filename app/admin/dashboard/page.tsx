@@ -503,6 +503,7 @@ export default function AdminDashboard() {
   const [deleteSessionId, setDeleteSessionId] = useState<string | null>(null)
   const [manuallyModifiedPrizes, setManuallyModifiedPrizes] = useState<Set<string>>(new Set())
   const [activePatterns, setActivePatterns] = useState<Record<string, any>>({})
+  const [blankGameCount, setBlankGameCount] = useState<number>(5)
   const [displayConfig, setDisplayConfig] = useState({
     gamesDisplaySeconds: 12,
     jokeQuestionSeconds: 8,
@@ -914,7 +915,7 @@ export default function AdminDashboard() {
     const newGame: GameConfig = {
       id: gameId,
       patternCode: 'single_line',
-      patternName: PATTERNS.single_line.name,
+      patternName: activePatterns.single_line?.name || 'Single Line',
       prizeValue: 10,
       orderIndex: newSession.games.length
     }
@@ -925,6 +926,43 @@ export default function AdminDashboard() {
         ...prev,
         games: enforceSpecialEnding(updatedGames)
       }
+    })
+  }
+
+  const addMultipleBlankGames = (count: number) => {
+    if (count < 1) return
+
+    // Get list of active pattern codes to cycle through
+    const patternCodes = Object.keys(activePatterns)
+    const defaultPatternCode = patternCodes.length > 0 ? patternCodes[0] : 'single_line'
+    const defaultPatternName = activePatterns[defaultPatternCode]?.name || 'Single Line'
+
+    const newGames: GameConfig[] = []
+    for (let i = 0; i < count; i++) {
+      newGames.push({
+        id: crypto.randomUUID(),
+        patternCode: defaultPatternCode,
+        patternName: defaultPatternName,
+        prizeValue: 10,
+        orderIndex: newSession.games.length + i
+      })
+    }
+
+    setNewSession(prev => {
+      const updatedGames = [...prev.games, ...newGames]
+      return {
+        ...prev,
+        games: enforceSpecialEnding(updatedGames)
+      }
+    })
+
+    // Clear manual modification tracking since all prizes will need recalculating
+    setManuallyModifiedPrizes(new Set())
+
+    toast({
+      title: "Games Added",
+      description: `Added ${count} blank game${count > 1 ? 's' : ''}. Select patterns and recalculate prizes.`,
+      variant: "default"
     })
   }
 
@@ -941,7 +979,7 @@ export default function AdminDashboard() {
         updatedGames[penultimateIndex] = {
           ...updatedGames[penultimateIndex],
           patternCode: 'double_bingo',
-          patternName: PATTERNS.double_bingo.name
+          patternName: activePatterns.double_bingo?.name || 'Double Bingo'
         }
       }
     }
@@ -952,7 +990,7 @@ export default function AdminDashboard() {
       updatedGames[finalIndex] = {
         ...updatedGames[finalIndex],
         patternCode: 'coverall',
-        patternName: PATTERNS.coverall.name
+        patternName: activePatterns.coverall?.name || 'Coverall'
       }
     }
 
@@ -1361,7 +1399,7 @@ export default function AdminDashboard() {
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <Label className="text-lg font-medium">Games</Label>
-                    <div className="flex gap-2">
+                    <div className="flex items-center gap-2">
                       {newSession.games.length === 0 && (
                         <Button onClick={generateGames} size="sm" className="bg-green-600 hover:bg-green-700">
                           <FileText className="w-4 h-4 mr-1" />
@@ -1374,9 +1412,28 @@ export default function AdminDashboard() {
                           Recalculate Prizes
                         </Button>
                       )}
+                      <div className="flex items-center gap-1 border rounded-md px-1">
+                        <Input
+                          type="number"
+                          value={blankGameCount}
+                          onChange={(e) => setBlankGameCount(Math.max(1, Math.min(50, parseInt(e.target.value) || 1)))}
+                          min="1"
+                          max="50"
+                          className="w-16 h-8 text-center border-0 p-1"
+                        />
+                        <Button
+                          onClick={() => addMultipleBlankGames(blankGameCount)}
+                          size="sm"
+                          variant="outline"
+                          className="h-8"
+                        >
+                          <Plus className="w-4 h-4 mr-1" />
+                          Add Blank
+                        </Button>
+                      </div>
                       <Button onClick={addGame} size="sm" variant="outline">
                         <Plus className="w-4 h-4 mr-1" />
-                        Add Game
+                        Add 1
                       </Button>
                     </div>
                   </div>
