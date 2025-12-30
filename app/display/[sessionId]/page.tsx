@@ -566,7 +566,7 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
     return (
       <div
         className={cn(
-          "relative rounded-lg p-2 hover:scale-105 transition-all duration-300 flex flex-col aspect-square text-xs",
+          "relative rounded-lg p-1 py-0.5 hover:scale-105 transition-all duration-300 flex flex-col aspect-[1/0.9] text-xs",
           isCompleted && game.winnerName
             ? "ring-4 shadow-lg"
             : isCompleted && "ring-4 ring-gray-400/80 shadow-gray-400/30 shadow-lg",
@@ -640,9 +640,9 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
           )}
         </div>
 
-        <div className="flex justify-center items-start mb-0.5">
+        <div className="flex justify-center items-start">
           <Badge className={cn(
-            "text-xs px-1.5 py-0.5 font-bold",
+            "text-xs px-1.5 py-0 font-bold",
             isJackpotGame ? "bg-yellow-500 hover:bg-yellow-600" : "bg-blue-600"
           )}>
             #{index + 1}
@@ -650,12 +650,12 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
         </div>
 
         {isJackpotGame && (
-          <Badge className="text-xs px-1.5 py-0.5 mb-0.5 bg-orange-500 hover:bg-orange-600 self-center font-bold">
+          <Badge className="text-xs px-1.5 py-0 bg-orange-500 hover:bg-orange-600 self-center font-bold">
             🎰 JACKPOT
           </Badge>
         )}
 
-        <h3 className="text-xl font-bold text-white mb-0.5 text-center leading-tight">
+        <h3 className="text-lg font-bold text-white text-center leading-none">
           {game.patternName}
         </h3>
 
@@ -829,7 +829,7 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
 
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Navbar-style Header */}
-          <div className="bg-black/30 backdrop-blur-md border-b border-white/20 px-6 py-4 mb-6">
+          <div className="bg-black/30 backdrop-blur-md border-b border-white/20 px-6 py-2 mb-1">
             <div className="flex items-start justify-between max-w-7xl mx-auto">
               <div className="flex items-center gap-8">
                 {/* Session Name */}
@@ -862,41 +862,62 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
           </div>
 
           {/* Games Preview */}
-          <div className="flex-1 px-6 py-4">
+          <div className="flex-1 px-6 py-1">
             <Card className="bg-white/10 backdrop-blur-md border-white/20 shadow-2xl h-full">
-              <div className="p-4 h-full">
-                {/* Custom 6-5-2 layout for 13 games */}
+              <div className="p-2 h-full">
+                {/* Dynamic layout based on game count */}
                 <div className="flex flex-col gap-0.5 h-full justify-center">
-                  {/* Top row: 6 games (10% larger than others) */}
-                  <div className="grid grid-cols-6 gap-3 scale-100 origin-center">
-                    {session.games.slice(0, 6).map((game, index) => (
+                  {/* Top row: 5 games */}
+                  <div className="grid grid-cols-5 gap-3 scale-100 origin-center">
+                    {session.games.slice(0, 5).map((game, index) => (
                       <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index} />
                     ))}
                   </div>
 
-                  {/* Middle row: 5 games */}
-                  <div className="grid grid-cols-5 gap-3 scale-90 origin-center">
-                    {session.games.slice(6, 11).map((game, index) => (
-                      <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index + 6} />
-                    ))}
-                  </div>
-
-                  {/* Bottom row: 2 games (centered) */}
-                  <div className="flex justify-center gap-3 scale-90 origin-center">
-                    {session.games.slice(11, 13).map((game, index) => (
-                      <div key={game.id} className="w-1/6">
-                        <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index + 11} />
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Additional games beyond 13 in a flexible grid */}
-                  {session.games.length > 13 && (
-                    <div className="grid grid-cols-6 gap-3 scale-90 origin-center">
-                      {session.games.slice(13).map((game, index) => (
-                        <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index + 13} />
+                  {/* Second row: 5 games (if more than 5 games) */}
+                  {session.games.length > 5 && (
+                    <div className="grid grid-cols-5 gap-3 scale-100 origin-center">
+                      {session.games.slice(5, 10).map((game, index) => (
+                        <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index + 5} />
                       ))}
                     </div>
+                  )}
+
+                  {/* Third row: Handle 13 games (3 centered) or 11-15 games (up to 5) */}
+                  {session.games.length > 10 && session.games.length <= 15 && (
+                    session.games.length === 13 ? (
+                      // For exactly 13 games: center the 3 remaining games
+                      <div className="flex justify-center gap-3 scale-100 origin-center">
+                        {session.games.slice(10, 13).map((game, index) => (
+                          <div key={`game-${game.id}-${game.patternType}`} className="w-[calc(20%-0.6rem)]">
+                            <GameCard game={game} index={index + 10} />
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      // For other counts (11, 12, 14, 15): use grid
+                      <div className="grid grid-cols-5 gap-3 scale-100 origin-center">
+                        {session.games.slice(10, 15).map((game, index) => (
+                          <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index + 10} />
+                        ))}
+                      </div>
+                    )
+                  )}
+
+                  {/* Additional games beyond 15 in a flexible grid */}
+                  {session.games.length > 15 && (
+                    <>
+                      <div className="grid grid-cols-5 gap-3 scale-100 origin-center">
+                        {session.games.slice(10, 15).map((game, index) => (
+                          <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index + 10} />
+                        ))}
+                      </div>
+                      <div className="grid grid-cols-5 gap-3 scale-90 origin-center">
+                        {session.games.slice(15).map((game, index) => (
+                          <GameCard key={`game-${game.id}-${game.patternType}`} game={game} index={index + 15} />
+                        ))}
+                      </div>
+                    </>
                   )}
                 </div>
               </div>
