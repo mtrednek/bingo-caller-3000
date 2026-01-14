@@ -1186,8 +1186,8 @@ export default function GameControl({ params }: GameControlProps) {
             ) : (
               <>
                 <div className="text-center space-y-4">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-lg">
-                    <span className="text-4xl font-bold text-white">
+                  <div className="w-64 h-64 mx-auto rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-lg">
+                    <span className="text-8xl font-bold text-white">
                       {gameState.lastCallDisplay || '-'}
                     </span>
                   </div>
