@@ -12,9 +12,9 @@ export async function GET() {
       config = await prisma.displayConfig.create({
         data: {
           currentJokeIndex: 0,
-          gamesDisplaySeconds: 12,
-          jokeQuestionSeconds: 8,
-          jokeAnswerSeconds: 6,
+          gamesDisplaySeconds: 16,
+          jokeQuestionSeconds: 4,
+          jokeAnswerSeconds: 4,
           displayMargin: 0
         }
       })
@@ -41,9 +41,9 @@ export async function PATCH(request: Request) {
       config = await prisma.displayConfig.create({
         data: {
           currentJokeIndex: 0,
-          gamesDisplaySeconds: 10,
-          jokeQuestionSeconds: 5,
-          jokeAnswerSeconds: 5,
+          gamesDisplaySeconds: 16,
+          jokeQuestionSeconds: 4,
+          jokeAnswerSeconds: 4,
           displayMargin: 0
         }
       })

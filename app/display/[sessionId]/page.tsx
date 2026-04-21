@@ -67,9 +67,9 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
   const [sessionJokeData, setSessionJokeData] = useState<SessionJokeData | null>(null)
   const [waitingDisplayMode, setWaitingDisplayMode] = useState<WaitingDisplayMode>('games')
   const [displayConfig, setDisplayConfig] = useState({
-    gamesDisplaySeconds: 12,
-    jokeQuestionSeconds: 8,
-    jokeAnswerSeconds: 6,
+    gamesDisplaySeconds: 16,
+    jokeQuestionSeconds: 4,
+    jokeAnswerSeconds: 4,
     displayMargin: 0
   })
   const [gameState, setGameState] = useState<GameState>({

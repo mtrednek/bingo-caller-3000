@@ -505,9 +505,9 @@ export default function AdminDashboard() {
   const [activePatterns, setActivePatterns] = useState<Record<string, any>>({})
   const [blankGameCount, setBlankGameCount] = useState<number>(5)
   const [displayConfig, setDisplayConfig] = useState({
-    gamesDisplaySeconds: 12,
-    jokeQuestionSeconds: 8,
-    jokeAnswerSeconds: 6,
+    gamesDisplaySeconds: 16,
+    jokeQuestionSeconds: 4,
+    jokeAnswerSeconds: 4,
     displayMargin: 0
   })
   const [newSession, setNewSession] = useState<SessionConfig>({

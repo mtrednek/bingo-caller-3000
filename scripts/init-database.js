@@ -51,9 +51,9 @@ async function handleDefaultData(prisma, isNewDb) {
     await prisma.displayConfig.create({
       data: {
         currentJokeIndex: 0,
-        gamesDisplaySeconds: 10,
-        jokeQuestionSeconds: 5,
-        jokeAnswerSeconds: 5,
+        gamesDisplaySeconds: 16,
+        jokeQuestionSeconds: 4,
+        jokeAnswerSeconds: 4,
         displayMargin: 0
       }
     });

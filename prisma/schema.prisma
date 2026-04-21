@@ -125,9 +125,9 @@ model SystemSettings {
 model DisplayConfig {
   id                    String   @id @default(cuid())
   currentJokeIndex      Int      @default(0)
-  gamesDisplaySeconds   Int      @default(10)
-  jokeQuestionSeconds   Int      @default(5)
-  jokeAnswerSeconds     Int      @default(5)
+  gamesDisplaySeconds   Int      @default(16)
+  jokeQuestionSeconds   Int      @default(4)
+  jokeAnswerSeconds     Int      @default(4)
   displayMargin         Int      @default(0)  // Outer margin in pixels for display screens
   updatedAt             DateTime @updatedAt
   createdAt             DateTime @default(now())
