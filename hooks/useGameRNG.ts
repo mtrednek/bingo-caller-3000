@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { SecureRNG, PatternAwareRNG, RNGManager } from '@/lib/rng'
 import { BingoPattern } from '@/lib/patterns'
 
@@ -155,26 +155,45 @@ export function useGameRNG(gameId?: string): [GameRNGState, GameRNGActions] {
   return [state, actions]
 }
 
-// Hook for auto-calling numbers at intervals
+// Hook for auto-calling numbers at intervals.
+// callNumber may be async (the consumer typically wraps the RNG draw with
+// a DB write + socket emit); the ref pattern avoids resetting the interval
+// when the consumer passes a fresh closure on each render.
 export function useAutoCall(
-  callNumber: () => number | null,
+  callNumber: () => number | null | Promise<number | null>,
   intervalSeconds: number = 10,
   isActive: boolean = false
 ) {
   const [autoCallEnabled, setAutoCallEnabled] = useState(false)
+  const [secondsRemaining, setSecondsRemaining] = useState(intervalSeconds)
+  const callNumberRef = useRef(callNumber)
 
   useEffect(() => {
-    if (!autoCallEnabled || !isActive) return
+    callNumberRef.current = callNumber
+  })
 
-    const interval = setInterval(() => {
-      const number = callNumber()
-      if (number === null) {
-        setAutoCallEnabled(false) // Stop auto-calling when game ends
+  useEffect(() => {
+    if (!autoCallEnabled || !isActive) {
+      setSecondsRemaining(intervalSeconds)
+      return
+    }
+
+    let counter = intervalSeconds
+    setSecondsRemaining(counter)
+
+    const tick = setInterval(() => {
+      counter -= 1
+      if (counter <= 0) {
+        counter = intervalSeconds
+        Promise.resolve(callNumberRef.current()).then((number) => {
+          if (number === null) setAutoCallEnabled(false)
+        })
       }
-    }, intervalSeconds * 1000)
+      setSecondsRemaining(counter)
+    }, 1000)
 
-    return () => clearInterval(interval)
-  }, [autoCallEnabled, isActive, callNumber, intervalSeconds])
+    return () => clearInterval(tick)
+  }, [autoCallEnabled, isActive, intervalSeconds])
 
-  return [autoCallEnabled, setAutoCallEnabled] as const
+  return [autoCallEnabled, setAutoCallEnabled, secondsRemaining] as const
 }

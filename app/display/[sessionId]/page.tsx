@@ -1,10 +1,12 @@
 'use client'
 
-import React, { useEffect, useState, use } from 'react'
+import React, { useEffect, useState, use, useRef } from 'react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import PatternVisualizer from '@/components/patterns/PatternVisualizer'
+import { SocketStatusBanner } from '@/components/SocketStatusBanner'
+import { useSocket } from '@/hooks/useSocket'
 import { cn } from '@/lib/utils'
 
 interface DisplayScreenProps {
@@ -83,19 +85,65 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
   const [factoids, setFactoids] = useState<Record<string, string[]>>({})
   const [currentFactoid, setCurrentFactoid] = useState<string>('')
 
+  const { isConnected, socket } = useSocket(sessionId)
+  const loadSessionRef = useRef<() => Promise<void> | void>(() => {})
+  const [autoCallSeconds, setAutoCallSeconds] = useState<number | null>(null)
+  const autoCallWatchdogRef = useRef<NodeJS.Timeout | null>(null)
+
   useEffect(() => {
     loadSession()
     loadSessionJokes()
     loadDisplayConfig()
     loadFactoids()
 
-    // Set up polling for updates - reduced frequency to prevent jarring repaints
-    const pollInterval = setInterval(loadSession, 3000) // Changed from 1000ms to 3000ms
+    // Polling as safety net (socket-driven refresh is primary)
+    const pollInterval = setInterval(loadSession, 3000)
 
     return () => {
       clearInterval(pollInterval)
     }
   }, [sessionId])
+
+  useEffect(() => {
+    loadSessionRef.current = loadSession
+  })
+
+  useEffect(() => {
+    if (!socket) return
+
+    const refresh = () => loadSessionRef.current?.()
+
+    const onAutoCallTick = (data: { sessionId: string; secondsRemaining: number | null }) => {
+      setAutoCallSeconds(data.secondsRemaining)
+      // Watchdog: if no tick arrives within ~4s, the control panel went
+      // away or auto-call was turned off without a clean stop event — clear.
+      // 4s tolerates brief render hiccups / background-tab throttling while
+      // still feeling responsive when auto-call is genuinely off.
+      if (autoCallWatchdogRef.current) clearTimeout(autoCallWatchdogRef.current)
+      if (data.secondsRemaining !== null) {
+        autoCallWatchdogRef.current = setTimeout(() => setAutoCallSeconds(null), 4000)
+      }
+    }
+
+    socket.on('number-called', refresh)
+    socket.on('game-start', refresh)
+    socket.on('game-end', refresh)
+    socket.on('winner-verified', refresh)
+    socket.on('display-mode-change', refresh)
+    socket.on('session-update', refresh)
+    socket.on('auto-call-tick', onAutoCallTick)
+
+    return () => {
+      socket.off('number-called', refresh)
+      socket.off('game-start', refresh)
+      socket.off('game-end', refresh)
+      socket.off('winner-verified', refresh)
+      socket.off('display-mode-change', refresh)
+      socket.off('session-update', refresh)
+      socket.off('auto-call-tick', onAutoCallTick)
+      if (autoCallWatchdogRef.current) clearTimeout(autoCallWatchdogRef.current)
+    }
+  }, [socket])
 
   // Effect to cycle through waiting display modes
   useEffect(() => {
@@ -285,12 +333,24 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
               gameStatus: 'waiting'
             }
           } else if (currentDisplayMode === 'current-game' && displayModeData?.currentGame) {
+            // displayModeData.currentGame is a snapshot captured when the mode
+            // was forced; reconcile against the freshly-loaded session so
+            // calledNumbers/lastCall/status stay current.
+            const freshGame =
+              sessionData.games.find((g: any) => g.id === displayModeData.currentGame.id) ||
+              displayModeData.currentGame
+            const calledNumbers = Array.isArray(freshGame.calledNumbers)
+              ? (freshGame.calledNumbers as number[])
+              : []
+            const lastNumber = calledNumbers[calledNumbers.length - 1]
             newState = {
               ...prevState,
               displayMode: currentDisplayMode,
               forceDisplayMode: true,
-              currentGame: displayModeData.currentGame,
-              gameStatus: 'active'
+              currentGame: freshGame,
+              calledNumbers,
+              lastCall: lastNumber != null ? `${getBingoLetter(lastNumber)}-${lastNumber}` : '',
+              gameStatus: freshGame.status === 'completed' ? 'completed' : 'active',
             }
           }
         } else {
@@ -807,15 +867,27 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
   // Show joke screens when in waiting mode
   if (shouldShowGamesList() && session) {
     if (waitingDisplayMode === 'joke-question') {
-      return <JokeQuestionScreen />
+      return (
+        <>
+          <SocketStatusBanner isConnected={isConnected} />
+          <JokeQuestionScreen />
+        </>
+      )
     }
 
     if (waitingDisplayMode === 'joke-answer') {
-      return <JokeAnswerScreen />
+      return (
+        <>
+          <SocketStatusBanner isConnected={isConnected} />
+          <JokeAnswerScreen />
+        </>
+      )
     }
 
     // Show games list (waitingDisplayMode === 'games')
     return (
+      <>
+        <SocketStatusBanner isConnected={isConnected} />
       <div
         className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white p-4 overflow-hidden transition-all duration-1000"
         style={{ padding: `${displayConfig.displayMargin}px` }}
@@ -927,12 +999,15 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
         </div>
 
       </div>
+      </>
     )
   }
 
   // Display current game
   if (shouldShowCurrentGame() && gameState.currentGame) {
     return (
+      <>
+        <SocketStatusBanner isConnected={isConnected} />
       <div
         className="h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden flex flex-col"
         style={{ padding: `${displayConfig.displayMargin}px` }}
@@ -1021,6 +1096,21 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
                   </div>
                 </div>
               </div>
+
+              {/* Next Call countdown (only while auto-call is active) */}
+              {autoCallSeconds !== null && gameState.gameStatus === 'active' && (
+                <div className="flex flex-col items-center">
+                  <h3 className="text-2xl font-bold text-white mb-3">Next Call</h3>
+                  <div
+                    className="rounded-full bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 flex items-center justify-center shadow-2xl"
+                    style={{ width: '300px', height: '300px' }}
+                  >
+                    <div className="text-7xl font-black text-white drop-shadow-2xl tabular-nums">
+                      {autoCallSeconds}s
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -1039,16 +1129,20 @@ export default function DisplayScreen({ params }: DisplayScreenProps) {
         </div>
 
       </div>
+      </>
     )
   }
 
   // Loading state
   return (
+    <>
+      <SocketStatusBanner isConnected={isConnected} />
     <div className="min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 flex items-center justify-center">
       <div className="text-center">
         <div className="w-32 h-32 border-4 border-white/30 border-t-white rounded-full animate-spin mb-8"></div>
         <div className="text-2xl text-white">Loading Bingo Session...</div>
       </div>
     </div>
+    </>
   )
 }

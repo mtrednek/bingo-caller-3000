@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { io, Socket } from 'socket.io-client'
 
 interface SocketEvents {
@@ -35,6 +35,15 @@ interface SocketEvents {
     startTime?: string
     endTime?: string
   }) => void
+  'display-mode-change': (data: {
+    sessionId: string
+    displayMode: 'auto' | 'games-list' | 'current-game'
+    currentGame?: any
+  }) => void
+  'auto-call-tick': (data: {
+    sessionId: string
+    secondsRemaining: number | null
+  }) => void
 }
 
 export function useSocket(sessionId?: string) {
@@ -46,9 +55,9 @@ export function useSocket(sessionId?: string) {
     // Only connect if we have a session ID
     if (!sessionId) return
 
-    const socketUrl = process.env.NODE_ENV === 'production' 
-      ? `wss://${window.location.hostname}:3001`
-      : 'http://localhost:3001'
+    const socketUrl =
+      process.env.NEXT_PUBLIC_SOCKET_URL ||
+      `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.hostname}:3001`
 
     console.log('Connecting to Socket.IO server:', socketUrl)
 
@@ -117,17 +126,23 @@ export function useSocket(sessionId?: string) {
     }
   }, [sessionId])
 
-  const emit = <K extends keyof SocketEvents>(
+  // Stable identity — reads through refs so callers can put `emit` in
+  // useEffect deps without re-firing every render.
+  const isConnectedRef = useRef(isConnected)
+  useEffect(() => {
+    isConnectedRef.current = isConnected
+  }, [isConnected])
+
+  const emit = useCallback(<K extends keyof SocketEvents>(
     event: K,
     data: Parameters<SocketEvents[K]>[0]
   ) => {
-    if (socketRef.current && isConnected) {
+    if (socketRef.current && isConnectedRef.current) {
       socketRef.current.emit(event, data)
-      console.log(`Emitted ${event}:`, data)
     } else {
       console.warn(`Cannot emit ${event}: socket not connected`)
     }
-  }
+  }, [])
 
   return {
     socket: socketRef.current,

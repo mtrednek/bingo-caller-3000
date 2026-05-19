@@ -102,6 +102,15 @@ io.on('connection', (socket) => {
     io.to(`session-${data.sessionId}`).emit('display-mode-change', data)
   })
 
+  // Relay auto-call countdown (one tick per second from the control panel).
+  // secondsRemaining is null when auto-call is disabled.
+  socket.on('auto-call-tick', (data: {
+    sessionId: string
+    secondsRemaining: number | null
+  }) => {
+    io.to(`session-${data.sessionId}`).emit('auto-call-tick', data)
+  })
+
   // Handle disconnection
   socket.on('disconnect', () => {
     console.log('Client disconnected:', socket.id)

@@ -11,7 +11,9 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { useToast } from '@/hooks/use-toast'
 import { useGameRNG, useAutoCall } from '@/hooks/useGameRNG'
+import { useSocket } from '@/hooks/useSocket'
 import PatternVisualizer from '@/components/patterns/PatternVisualizer'
+import { SocketStatusBanner } from '@/components/SocketStatusBanner'
 // Patterns will be fetched from the database via API
 import { Play, RotateCcw, CheckCircle, Settings, AlertCircle, Eye, PlayCircle, PauseCircle, HelpCircle, X, Keyboard } from 'lucide-react'
 
@@ -68,9 +70,13 @@ export default function GameControl({ params }: GameControlProps) {
   const [patterns, setPatterns] = useState<Record<string, any>>({})
   const [currentGameIndex, setCurrentGameIndex] = useState(0)
   const [gameState, gameActions] = useGameRNG()
-  const [autoCallEnabled, setAutoCallEnabled] = useAutoCall(
-    gameActions.callNumber,
-    10, // 10 seconds interval
+  const [autoCallIntervalSeconds, setAutoCallIntervalSeconds] = useState(10)
+  const [autoCallEnabled, setAutoCallEnabled, autoCallSecondsRemaining] = useAutoCall(
+    // Wrapped below in callNumber to also hit the DB + emit the socket event.
+    // useAutoCall reads through a ref so this closure being re-created each
+    // render does not reset the tick interval.
+    () => callNumber(),
+    autoCallIntervalSeconds,
     gameState.isGameActive
   )
   const [winnerDialogOpen, setWinnerDialogOpen] = useState(false)
@@ -96,6 +102,14 @@ export default function GameControl({ params }: GameControlProps) {
   const [showQuickStartGuide, setShowQuickStartGuide] = useState(false)
   const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false)
   const [tipsEnabled, setTipsEnabled] = useState(true)
+  const { isConnected: socketConnected, emit: socketEmit } = useSocket(sessionId)
+
+  useEffect(() => {
+    socketEmit('auto-call-tick', {
+      sessionId,
+      secondsRemaining: autoCallEnabled ? autoCallSecondsRemaining : null,
+    })
+  }, [autoCallEnabled, autoCallSecondsRemaining, sessionId, socketEmit])
 
   useEffect(() => {
     loadSession()
@@ -235,6 +249,14 @@ export default function GameControl({ params }: GameControlProps) {
       })
 
       if (response.ok) {
+        socketEmit('game-start', {
+          sessionId,
+          gameId: game.id,
+          patternType: game.patternType,
+          patternName: game.patternName,
+          prizeValue: game.prizeValue,
+        })
+
         // Initialize the RNG with excluded ranges from the game
         const excludedRanges = Array.isArray(game.excludedRanges) ? game.excludedRanges as string[] : []
         gameActions.initializeGame(game.id, false, excludedRanges)
@@ -259,8 +281,11 @@ export default function GameControl({ params }: GameControlProps) {
           }
         }
 
-        // Switch display to show the current game
-        await setDisplayModeAndBroadcast('current-game')
+        // Switch display to show the current game.
+        // Pass `game` explicitly because setCurrentGameIndex above has not
+        // committed to React state yet, so a closure read of currentGameIndex
+        // inside setDisplayModeAndBroadcast would resolve to the previous game.
+        await setDisplayModeAndBroadcast('current-game', game)
 
         toast({
           title: "Game Started",
@@ -284,25 +309,34 @@ export default function GameControl({ params }: GameControlProps) {
     }
   }
 
-  const callNumber = async () => {
+  const callNumber = async (): Promise<number | null> => {
     const number = gameActions.callNumber()
-    if (!number || !session) return
+    if (!number || !session) return null
 
     const game = session.games[currentGameIndex]
-    if (!game) return
+    if (!game) return null
+
+    const display = `${getBingoLetter(number)}-${number}`
 
     try {
       await fetch(`/api/games/${game.id}/call`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          number,
-          display: `${getBingoLetter(number)}-${number}`
-        })
+        body: JSON.stringify({ number, display })
+      })
+
+      socketEmit('number-called', {
+        sessionId,
+        gameId: game.id,
+        number,
+        display,
+        callCount: gameState.calledNumbers.length + 1,
       })
     } catch (error) {
       console.error('Failed to record call:', error)
     }
+
+    return number
   }
 
   const callManualNumber = async () => {
@@ -360,13 +394,22 @@ export default function GameControl({ params }: GameControlProps) {
       }
 
       // Record the call in the database
+      const manualDisplay = `${getBingoLetter(calledNumber)}-${calledNumber}`
       await fetch(`/api/games/${game.id}/call`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           number: calledNumber,
-          display: `${getBingoLetter(calledNumber)}-${calledNumber}`
+          display: manualDisplay
         })
+      })
+
+      socketEmit('number-called', {
+        sessionId,
+        gameId: game.id,
+        number: calledNumber,
+        display: manualDisplay,
+        callCount: gameState.calledNumbers.length + 1,
       })
 
       // Clear the input
@@ -387,8 +430,19 @@ export default function GameControl({ params }: GameControlProps) {
     }
   }
 
-  const setDisplayModeAndBroadcast = async (mode: 'auto' | 'games-list' | 'current-game') => {
+  const setDisplayModeAndBroadcast = async (
+    mode: 'auto' | 'games-list' | 'current-game',
+    explicitGame?: any
+  ) => {
     setDisplayMode(mode)
+
+    // explicitGame lets callers (e.g. startGame) sidestep stale state when
+    // currentGameIndex was just changed in the same handler and hasn't
+    // committed to React state yet.
+    const gameForMode =
+      mode === 'current-game'
+        ? explicitGame ?? (session ? session.games[currentGameIndex] : null)
+        : null
 
     try {
       const response = await fetch(`/api/sessions/${sessionId}/display-mode`, {
@@ -396,7 +450,7 @@ export default function GameControl({ params }: GameControlProps) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           displayMode: mode,
-          currentGame: mode === 'current-game' && session ? session.games[currentGameIndex] : null
+          currentGame: gameForMode
         })
       })
 
@@ -405,6 +459,12 @@ export default function GameControl({ params }: GameControlProps) {
       }
 
       await response.json()
+
+      socketEmit('display-mode-change', {
+        sessionId,
+        displayMode: mode,
+        currentGame: gameForMode,
+      })
 
       toast({
         title: "Display Mode Updated",
@@ -463,6 +523,14 @@ export default function GameControl({ params }: GameControlProps) {
           winnerCard: winner.card,
           calledNumbers: gameState.calledNumbers
         })
+      })
+
+      socketEmit('winner-verified', {
+        sessionId,
+        gameId: game.id,
+        winnerName: winner.name,
+        winnerCard: winner.card,
+        calledNumbers: gameState.calledNumbers,
       })
 
       setWinnerDialogOpen(false)
@@ -695,9 +763,12 @@ export default function GameControl({ params }: GameControlProps) {
 
   if (!session) {
     return (
-      <div className="flex items-center justify-center min-h-96">
-        <div className="text-lg">Loading session...</div>
-      </div>
+      <>
+        <SocketStatusBanner isConnected={socketConnected} />
+        <div className="flex items-center justify-center min-h-96">
+          <div className="text-lg">Loading session...</div>
+        </div>
+      </>
     )
   }
 
@@ -706,6 +777,7 @@ export default function GameControl({ params }: GameControlProps) {
 
   return (
     <TooltipProvider>
+      <SocketStatusBanner isConnected={socketConnected} />
       <div className="space-y-6">
         {/* Quick Start Guide - First Time Users */}
         {showQuickStartGuide && (
@@ -1289,7 +1361,26 @@ export default function GameControl({ params }: GameControlProps) {
                           onChange={(e) => setAutoCallEnabled(e.target.checked)}
                           disabled={sessionPaused}
                         />
-                        {sessionPaused ? 'Auto-call (paused)' : 'Auto-call every 10 seconds'}
+                        <span>Auto-call every</span>
+                        <select
+                          value={autoCallIntervalSeconds}
+                          onChange={(e) => setAutoCallIntervalSeconds(Number(e.target.value))}
+                          disabled={sessionPaused}
+                          className="border border-gray-300 rounded px-1 py-0.5 text-sm bg-white disabled:opacity-50"
+                          aria-label="Auto-call interval"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <option value={5}>5</option>
+                          <option value={10}>10</option>
+                          <option value={15}>15</option>
+                          <option value={20}>20</option>
+                        </select>
+                        <span>seconds</span>
+                        {sessionPaused
+                          ? <span className="text-gray-500">(paused)</span>
+                          : autoCallEnabled
+                            ? <span className="text-gray-600 tabular-nums">(next in {autoCallSecondsRemaining}s)</span>
+                            : null}
                       </label>
                     </TooltipTrigger>
                     <TooltipContent>
