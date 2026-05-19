@@ -12,7 +12,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { useToast } from '@/hooks/use-toast'
 import { generateDefaultGames, generateValidatedSession, calculateSessionFinancials, validateGameConfiguration, recalculateGamePrizes } from '@/lib/default-games'
 import PatternVisualizer from '@/components/patterns/PatternVisualizer'
-import { Plus, Trash2, Play, Settings, Eye, DollarSign, Users, FileText, Edit, Clock } from 'lucide-react'
+import { Plus, Trash2, Play, Settings, Eye, DollarSign, Users, FileText, Edit, Clock, BarChart3 } from 'lucide-react'
 
 interface GameConfig {
   id: string
@@ -1668,6 +1668,18 @@ export default function AdminDashboard() {
                       <Settings className="w-4 h-4" />
                       Control
                     </Button>
+
+                    {session.status === 'completed' && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => window.open(`/admin/sessions/${session.id}/metrics`, '_blank')}
+                        className="flex items-center gap-1"
+                      >
+                        <BarChart3 className="w-4 h-4" />
+                        Metrics
+                      </Button>
+                    )}
 
                     <Button
                       size="sm"
