@@ -2,6 +2,7 @@ import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { db } from "@/lib/db"
 import bcrypt from "bcryptjs"
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit"
 
 export const {
   handlers: { GET, POST },
@@ -17,13 +18,17 @@ export const {
         username: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" }
       },
-      async authorize(credentials) {
+      async authorize(credentials, request) {
         if (!credentials?.username || !credentials?.password) return null
-        
+
+        const ip = getClientIp(request as Request)
+        const { allowed } = checkRateLimit(`login:${ip}`, 10, 5 * 60 * 1000)
+        if (!allowed) return null
+
         const user = await db.user.findUnique({
           where: { username: credentials.username as string }
         })
-        
+
         if (!user || !await bcrypt.compare(credentials.password as string, user.password)) {
           return null
         }

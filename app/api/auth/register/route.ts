@@ -1,9 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import bcrypt from 'bcryptjs'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
 export async function POST(request: NextRequest) {
   try {
+    const ip = getClientIp(request)
+    const { allowed, retryAfterSec } = checkRateLimit(
+      `register:${ip}`,
+      5,
+      60 * 60 * 1000
+    )
+    if (!allowed) {
+      return NextResponse.json(
+        { error: 'Too many registration attempts. Try again later.' },
+        { status: 429, headers: { 'Retry-After': String(retryAfterSec) } }
+      )
+    }
+
     const body = await request.json()
     const { username, email, password, role = 'caller' } = body
 
