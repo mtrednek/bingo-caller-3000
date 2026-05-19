@@ -1530,6 +1530,46 @@ export default function GameControl({ params }: GameControlProps) {
                   </p>
                 </div>
               )}
+
+              {/* Excluded Ranges */}
+              {session?.games[currentGameIndex] && (
+                <div className="w-full mt-4 pt-4 border-t">
+                  <Label className="text-sm font-medium mb-2 block">
+                    Excluded Ranges
+                  </Label>
+                  {(() => {
+                    const excluded = session.games[currentGameIndex].excludedRanges
+                    const ranges: Record<string, string> = {
+                      B: '1-15',
+                      I: '16-30',
+                      N: '31-45',
+                      G: '46-60',
+                      O: '61-75',
+                    }
+                    if (!Array.isArray(excluded) || excluded.length === 0) {
+                      return (
+                        <p className="text-xs text-gray-500">
+                          None — all 1-75 in play
+                        </p>
+                      )
+                    }
+                    return (
+                      <div className="flex flex-wrap gap-1.5">
+                        {excluded.map((letter) => (
+                          <Badge
+                            key={letter}
+                            variant="destructive"
+                            className="font-mono"
+                            title={`${letter} range (${ranges[letter] || '?'}) is excluded`}
+                          >
+                            {letter} {ranges[letter] || ''}
+                          </Badge>
+                        ))}
+                      </div>
+                    )
+                  })()}
+                </div>
+              )}
             </CardContent>
           </Card>
         )}
